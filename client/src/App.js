@@ -7,7 +7,8 @@ import browseServicePage from './pages/browseServicePage'
 import profilePage from './pages/profilePage';
 import homePage from './pages/homePage';
 import instructionPage from './pages/instructionPage';
-import authPage from './pages/authPage';
+import signUpPage from './pages/signUpPage';
+import loginPage from './pages/loginPage';
 import postPage from './pages/PostPage'
 
 
@@ -22,13 +23,14 @@ class App extends Component {
 
     <Router>
           <Switch>
-            <Route exact path="/" component={authPage}/>
+            <Route exact path="/" component={loginPage}/>
             <Route path="/home" component={homePage}/>
             <Route exact path="/instruction" component={instructionPage}  />
             <Route path="/profile" component={profilePage} />
             <Route path="/browse/job" component={browseJobPage}/>
             <Route path="/browse/service" component={browseServicePage}/>
-            <Route exact path="/Authentication" component={authPage}/>
+            <Route exact path="/login" component={loginPage}/>
+            <Route exact path="/sign-up" component={signUpPage}/>
             <Route exact path="/post" component={postPage}/>
           </Switch>
           </Router>
