@@ -9,12 +9,11 @@ const browsePage = () => (
 
   <div>
     <Navbar page="browseJob"/>
-    <div class="row">
+    <div class="row contentArea">
     <div class="col-md-1"></div>
-    <div class="col-md-3">
-    <Sidebar />
-    </div>
+    <div class="col-md-11">
     <BrowseContent content="Jobs"/>
+    </div>
     </div>
     </div>
 );
