@@ -1,8 +1,14 @@
 import React from "react";
+import './Footer.css'
 
 const Footer = props => (
     //html goes here to design and create navbar
-  <h1>Footer</h1>
+<div>
+    <footer class="footer">
+      <p>© 2018 Copyright:
+      </p>
+    </footer>
+    </div>
 );
 
 export default Footer;
