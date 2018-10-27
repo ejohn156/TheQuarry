@@ -7,8 +7,8 @@ const signUpPage = ({ match }) => (
     <div>
     <Navbar page="sign-up"/>
     <div class="row">
-    <div class="col-md-1"></div>
-    <div class="col-md-11">
+    <div class="col-md-2"></div>
+    <div class="col-md-8">
     <Auth type="sign-up"/>
     </div>
     </div>
