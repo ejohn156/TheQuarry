@@ -28,7 +28,14 @@ export default class authContent extends Component{
     <input type="checkbox" class="form-check-input" id="exampleCheck1"></input>
     <label class="form-check-label" for="exampleCheck1">Remember Me</label>
   </div>
+  <form action="/home">
   <button type="submit" class="btn btn-primary">Login</button>
+  </form>
+  
+  <div class="signup">
+  <small id="nologin" class="form-text text-muted">Don't have a login? Signup here.</small>
+  <a class="nav-link" href="/sign-up">Sign-up</a>
+  </div>
 </form>
 </div>
 </div>

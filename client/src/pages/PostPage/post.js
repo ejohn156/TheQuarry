@@ -3,7 +3,7 @@ import "./post.css";
 import Navbar from '../../components/Navbar'
 
 const postPage = ({ match }) => (
-
+<form>
   <div>
     <Navbar page="post"/>
     <div class="row">
@@ -13,7 +13,20 @@ const postPage = ({ match }) => (
     </div>
     {/* this is weird */}
     </div>
+    <div class = "col-md-1"></div>
+    <div class = "postjobcard">
+    <div class="card">  
+
+<div class="card-body">
     </div>
+      <div class="form-group">
+        <label for="JobName">Name of Job</label>
+        <textarea class="form-control" id="Job Name" rows="1"></textarea>
+      </div>
+      </div>
+      </div>
+      </div>
+    </form>
 
 
 );
