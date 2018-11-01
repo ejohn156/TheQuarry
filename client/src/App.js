@@ -9,7 +9,8 @@ import homePage from './pages/homePage';
 import instructionPage from './pages/instructionPage';
 import signUpPage from './pages/signUpPage';
 import loginPage from './pages/loginPage';
-import postPage from './pages/PostPage'
+import postJob from './pages/PostJob';
+import postService from './pages/PostService';
 
 
 class App extends Component {
@@ -20,7 +21,7 @@ class App extends Component {
     return (
       
     <div className="Container">
-
+      <div class="body">
     <Router>
           <Switch>
             <Route exact path="/" component={loginPage}/>
@@ -31,9 +32,11 @@ class App extends Component {
             <Route path="/browse/service" component={browseServicePage}/>
             <Route exact path="/login" component={loginPage}/>
             <Route exact path="/sign-up" component={signUpPage}/>
-            <Route exact path="/post" component={postPage}/>
+            <Route exact path="/post/Job" component={postJob}/>
+            <Route exact path="/post/Service" component={postService}/>
           </Switch>
           </Router>
+          </div>
         <div class="row">
         <div class="col-md-12">
       <Footer />

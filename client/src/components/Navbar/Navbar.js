@@ -38,8 +38,11 @@ export default class Navbar extends Component {
         <li class={this.state.activePage === "sign-up" ? "nav-item active":"nav-item"}>
           <a class="nav-link" href="/sign-up">Sign-up</a>
         </li>
-        <li class={this.state.activePage === "post" ? "nav-item active":"nav-item"}>
-          <a class="nav-link" href="/post">Post a Job/Service</a>
+        <li class={this.state.activePage === "postJob" ? "nav-item active":"nav-item"}>
+          <a class="nav-link" href="/post/Job">Post a Job</a>
+        </li>
+        <li class={this.state.activePage === "postService" ? "nav-item active":"nav-item"}>
+          <a class="nav-link" href="/post/Service">Post a Service</a>
         </li>
       </ul>
     </div>
