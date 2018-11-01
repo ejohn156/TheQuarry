@@ -8,6 +8,7 @@ export default class authContent extends Component{
     }
     render(){
         return(
+            this.state.authType === "login" ? (
 <div>
 <div class = "col-md-1"></div>
 <div class = "signincard">
@@ -40,7 +41,7 @@ export default class authContent extends Component{
 </div>
 </div>
 </div>
-</div>
+</div>):(<h1>Sign In Form Goes Here</h1>)
 
         );
     }

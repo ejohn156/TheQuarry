@@ -3,18 +3,14 @@ import "./post.css";
 import Navbar from '../../components/Navbar'
 
 const postPage = ({ match }) => (
-<form>
-  <div>
+
+<div>
     <Navbar page="post"/>
     <div class="row">
-    <div class="col-md-1"></div>
-    <div class="col-md-11">
-    <h1>Post a Job/Service page</h1>
-    </div>
-    {/* this is weird */}
-    </div>
-    <div class = "col-md-1"></div>
+    <div class="col-md-2"></div>
+    <div class="col-md-8">
     <div class = "postjobcard">
+    <form>
     <div class="card">  
 
 <div class="card-body">
@@ -44,11 +40,12 @@ const postPage = ({ match }) => (
         <textarea type="text" class="form-control" id="Necessaryskills" rows="4" placeholder="Necessary Skills"></textarea> 
       </div>
       </div>
+      </form>
       </div>
       </div>
-    </form>
-
-
+    
+    </div>
+    </div>
 );
 
 export default postPage;
