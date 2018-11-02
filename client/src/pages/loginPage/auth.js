@@ -1,7 +1,7 @@
 import React from "react";
 import "./auth.css";
 import Navbar from '../../components/Navbar';
-import Auth from '../../components/Auth'
+import Auth from '../../components/Auth';
 
 const loginPage = ({ match }) => (
     <div>
