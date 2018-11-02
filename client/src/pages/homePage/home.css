@@ -1,0 +1,16 @@
+/* 
+.col-md-1{
+    background-color:aqua;
+}
+
+.col-md-11{
+    background-color:yellow;
+    width: 100%;
+} */
+
+.pic{
+    display: inline-block;
+    width:100%;
+    border: 10px;
+    background-color:blue;
+}
