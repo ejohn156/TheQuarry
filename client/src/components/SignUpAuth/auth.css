@@ -1,0 +1,28 @@
+.signincard {
+    width: 50%;
+    
+    margin: auto;
+    margin-top: 3%; 
+    }
+
+    .btn-primary {
+        background-color: #00703C;
+        outline: none;
+        color: #fff;
+        font-size: 14px;
+        height: auto;
+        font-weight: normal;
+        padding: 14px 0;
+        border-color: #00703C;  
+        width: 50%;
+    }
+    .btn-primary:hover,
+    .btn-primary:focus {
+        color: #fff;
+        background-color: #C3D7A4;
+        border-color: #C3D7A4;
+    }
+h1{
+   text-align: center;
+   font-size: 28px;
+}
