@@ -9,13 +9,14 @@ const postPage = ({ match }) => (
     <div class="row">
     <div class="col-md-1"></div>
     <div class="col-md-11">
-    <h1>Post a Job/Service page</h1>
+    
     </div>
     {/* this is weird */}
     </div>
     <div class = "col-md-1"></div>
     <div class = "postjobcard">
     <div class="card">  
+    <h1>Post a Job</h1>
 
 <div class="card-body">
     </div>
@@ -38,11 +39,32 @@ const postPage = ({ match }) => (
     <option value="4">Academic</option>
   </select>
   </form>
-
-      <div class="form-group">
-        <label for="Jobdescription">Necessary Skills</label>
-        <textarea type="text" class="form-control" id="Necessaryskills" rows="4" placeholder="Necessary Skills"></textarea> 
+  <div class="Price">
+  <div class="form-group">
+        <label for="PriceofJob" id="PriceofJob">Price Range of Job</label>
+        <textarea type ="text" class="form-control" id="Price" rows="1" placeholder="Price $"></textarea>
       </div>
+  </div>
+
+<div class="submitjob">
+  <form action="/profile">
+  <button type="submit" class="button">Post Job</button>
+  </form>
+  </div>
+
+  <h2>
+    <br>
+    </br>
+    <br>
+    </br>
+    <br></br>
+    
+
+  </h2>
+
+  
+
+      
       </div>
       </div>
       </div>
