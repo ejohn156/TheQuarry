@@ -4,7 +4,7 @@ import "./Navbar.css"; /* import Navbar.css*/
 export default class Navbar extends Component {
     //html goes here to design and create navbar
     state = {
-      activePage: this.props.page
+      activePage: this.props.page,
     }
     render(){
       return(
