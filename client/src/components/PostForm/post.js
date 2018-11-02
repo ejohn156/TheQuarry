@@ -1,18 +1,16 @@
-import React from "react";
+import React, { Component } from "react";
 import "./post.css";
-import Navbar from '../../components/Navbar'
 
-const postPage = ({ match }) => (
-<form>
+
+export default class PostForm extends Component {
+    state = {
+        postType: this.props.type
+    }
+    render() {
+        return (
+            <form>
   <div>
-    <Navbar page="post"/>
-    <div class="row">
-    <div class="col-md-1"></div>
-    <div class="col-md-11">
-    
-    </div>
-    {/* this is weird */}
-    </div>
+   
     <div class = "col-md-1"></div>
     <div class = "postjobcard">
     <div class="card">  
@@ -69,8 +67,6 @@ const postPage = ({ match }) => (
       </div>
       </div>
     </form>
-
-
-);
-
-export default postPage;
+        );
+    }
+}
