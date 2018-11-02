@@ -5,8 +5,20 @@
     margin-top: 3%; 
     }
 
-h3{
+#Login{
+    text-align: center;
+    font-size: 28px;
+}
+
+#SignUpText{
     text-align: center;
     font-size: 14px;
 }
-
+#RememberMe{
+    text-align: center;
+    font-size: 14px;
+}
+#LoginButton{
+    text-align: center;
+    font-size: 14px;
+}

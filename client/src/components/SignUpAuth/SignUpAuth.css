@@ -22,7 +22,12 @@
         background-color: #C3D7A4;
         border-color: #C3D7A4;
     }
-h1{
-   text-align: center;
-   font-size: 28px;
-}
+    
+    #RegisterTitle{
+        text-align: center;
+        font-size: 28px;
+    }
+    #RegisterButton{
+        text-align: center;
+        font-size: 28px;
+    }

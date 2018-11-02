@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "./auth.css";
+import "./SignUpAuth.css";
 
 
 export default class authContent extends Component{
@@ -16,9 +16,8 @@ export default class authContent extends Component{
 
 <div class="card-body">
 <form>
-   
-    <div class="form-group"> 
-        <h1>Register</h1>     
+<div id="RegisterTitle">Register</div>  
+    <div class="form-group">    
         <input type="text" class="form-control" id="exampleInputFirstName1" aria-describedby="firstName" placeholder="First Name"></input>
     </div>
     <div class="form-group">      
@@ -39,11 +38,11 @@ export default class authContent extends Component{
   <div class="form-group">
     <input type="password" class="form-control" id="exampleInputConfirmPassword1" placeholder="Confirm Password"></input>
   </div>
-    <h1>
+    <div id="RegisterButton">
   <form action="/login">
   <button type="submit" name= "register-sumbit" tabindex="4" class="btn btn-primary">Register</button>
   </form>
-    </h1>
+  </div>
   
  
 </form>
