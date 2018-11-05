@@ -16,7 +16,7 @@ export default class authContent extends Component{
 
 <div class="card-body">
 <form>
-    <h1>Login</h1>
+    <div id="Login">Login</div>
     <div class="form-group">
         <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email"></input>
     </div>
@@ -24,23 +24,23 @@ export default class authContent extends Component{
     <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password"></input>
   </div>
   <div class="form-check">
-    <h3>
+    <div id="RememberMe">
     <input type="checkbox" class="form-check-input" id="exampleCheck1"></input>
     <label class="form-check-label" for="exampleCheck1">Remember Me</label>
-    </h3>
+    </div>
   </div>
-  <h3>
+  <div id="LoginButton">
   <form action="/home">
   <button type="submit" class="btn btn-primary">Login</button>
   </form>
-  </h3>
+  </div>
   
-  <h3>
+  <div id="SignUpText">
   <div class="signup">
   <small id="nologin" class="form-text text-muted">Don't have a login? Signup here.</small>
   <a class="nav-link" href="/sign-up">Sign-up</a>
   </div>
-  </h3>
+  </div>
   
 </form>
 </div>
