@@ -16,7 +16,8 @@ export default class ProfileForm extends Component {
                             <h1>Profile</h1>
 
                             <div class="card-body"></div>
-                            <center><img src="./default_profile.png" alt="No Photo available"></img><br/>
+                            <center>
+                                <img src="{require('client/default_profile.png')}" alt="No Photo available"></img><br/>
                             <input type="file"/>
                             </center>
 
@@ -64,7 +65,7 @@ export default class ProfileForm extends Component {
 
                             <div class="submitprofile">
     
-                                    <center><button type="submit" class="button">Submit changes</button></center>
+                                    <center><button type="submit" class="button">Submit changes</button></center><br/>
                                 
                             </div>
 
