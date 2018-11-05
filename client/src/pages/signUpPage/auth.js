@@ -1,7 +1,7 @@
 import React from "react";
 import "./auth.css";
 import Navbar from '../../components/Navbar';
-import Auth from '../../components/Auth'
+import Auth from '../../components/SignUpAuth';
 
 const signUpPage = ({ match }) => (
     <div>
@@ -9,7 +9,7 @@ const signUpPage = ({ match }) => (
     <div class="row">
     <div class="col-md-2"></div>
     <div class="col-md-8">
-    <Auth type="sign-up"/>
+    <Auth type="signup"/>
     </div>
     </div>
     </div>
