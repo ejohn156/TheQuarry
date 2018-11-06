@@ -10,7 +10,7 @@ module.exports.connect = (uri) => {
     process.exit(1);
   });
 
-  require('./user');
+  require('./User');
 };
 
 module.exports = {

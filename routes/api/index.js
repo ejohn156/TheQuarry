@@ -5,7 +5,7 @@ const usersRoutes = require("./Users")
 
 router.use("/jobs", venuesRoutes);
 router.use("/services", dressesRoutes);
-router.use("/user", usersRoutes);
+router.use("/users", usersRoutes);
 
 
 module.exports = router;
