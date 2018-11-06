@@ -23,7 +23,7 @@ export default class PostForm extends Component {
         <textarea type ="text" class="form-control" id="Job Name" rows="1" placeholder="Job Name"></textarea>
       </div>
       <div class="form-group">
-        <label for="Jobdescription">Job</label>
+        <label for="Jobdescription">Description</label>
         <textarea type="text" class="form-control" id="Job Description" rows="4" placeholder="Job Description"></textarea> 
       </div>
 
@@ -32,14 +32,14 @@ export default class PostForm extends Component {
   <select class="custom-select" id="inlineFormCustomSelect">
     <option selected>Choose...</option>
     <option value="1">Technology</option>
-    <option value="2">Artist</option>
+    <option value="2">Art</option>
     <option value="3">Mechanical</option>
     <option value="4">Academic</option>
   </select>
   </form>
   <div class="Price">
   <div class="form-group">
-        <label for="PriceofJob" id="PriceofJob">Price Range</label>
+        <label for="PriceofJob" id="PriceofJob">{this.state.postType === "Job" ? "Price Range":"Hourly Rate"}</label>
         <textarea type ="text" class="form-control" id="Price" rows="1" placeholder="Price $"></textarea>
       </div>
   </div>
