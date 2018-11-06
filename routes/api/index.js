@@ -1,10 +1,10 @@
 const router = require("express").Router();
-const venuesRoutes = require("./Jobs");
-const dressesRoutes = require('./Services')
+const jobsRoutes = require("./Jobs");
+const servicesRoutes = require('./Services')
 const usersRoutes = require("./Users")
 
-router.use("/jobs", venuesRoutes);
-router.use("/services", dressesRoutes);
+router.use("/jobs", jobsRoutes);
+router.use("/services", servicesRoutes);
 router.use("/users", usersRoutes);
 
 
