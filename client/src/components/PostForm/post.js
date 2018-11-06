@@ -29,7 +29,7 @@ export default class PostForm extends Component {
 
       <form class="form-inline">
   <label class="mr-sm-2" for="inlineFormCustomSelect">Category</label>
-  <select class="custom-select mb-2 mr-sm-2 mb-sm-0" id="inlineFormCustomSelect">
+  <select class="custom-select" id="inlineFormCustomSelect">
     <option selected>Choose...</option>
     <option value="1">Technology</option>
     <option value="2">Artist</option>
