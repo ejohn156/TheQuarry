@@ -11,7 +11,10 @@ export default {
       return axios.post("/api/users", userData);
     },
     update: function(userData) {
-      return axios.put("/api/users/"+user.id)
+      return axios.post("/api/users/"+user.id,{
+          id:user.id,
+          data: userData
+    })
     },
     getById: function(id) {
       return axios.get("/api/users/"+id)
