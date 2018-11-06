@@ -1,0 +1,13 @@
+.btn-group-vertical{
+    width: 100%;
+}
+.sideHead{
+    background-color: #F0BC00;
+    color: white;
+    border: 1px solid gray
+}
+.sidebtn{
+    background-color: #00703c;
+    color: white;
+    border: 1px solid gray;
+}

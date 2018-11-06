@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "./browseContent.css";
-import Sidebar from '../SideBar'
+
 
 
 export default class browseContent extends Component {
@@ -15,11 +15,11 @@ export default class browseContent extends Component {
             <div class="row">
                 <div class="col-md-2">
                     <div class="btn-group-vertical">
-                        <button type="button" class="btn btn-light" onClick={(event) => this.changeFilter("All")}>Categories</button>
-                        <button type="button" class="btn btn-secondary" onClick={(event) => this.changeFilter("Art")}>Art</button>
-                        <button type="button" class="btn btn-secondary" onClick={(event) => this.changeFilter("IT")}>IT</button>
-                        <button type="button" class="btn btn-secondary" onClick={(event) => this.changeFilter("Tutoring")}>Tutoring</button>
-                        <button type="button" class="btn btn-secondary" onClick={(event) => this.changeFilter("Mechanical")}>Mechanical</button>
+                        <button type="button" class={this.state.filter === "All" ? "btn sideHead":"btn sidebtn"} onClick={(event) => this.changeFilter("All")}>{this.state.filter === "All" ? "Categories":"All"}</button>
+                        <button type="button" class={this.state.filter === "Art" ? "btn sideHead":"btn sidebtn"} onClick={(event) => this.changeFilter("Art")}>Art</button>
+                        <button type="button" class={this.state.filter === "IT" ? "btn sideHead":"btn sidebtn"} onClick={(event) => this.changeFilter("IT")}>IT</button>
+                        <button type="button" class={this.state.filter === "Tutoring" ? "btn sideHead":"btn sidebtn"} onClick={(event) => this.changeFilter("Tutoring")}>Tutoring</button>
+                        <button type="button" class={this.state.filter === "Mechanical" ? "btn sideHead":"btn sidebtn"} onClick={(event) => this.changeFilter("Mechanical")}>Mechanical</button>
                     </div>
                 </div>
                 <div class="col-md-10">

@@ -1,6 +1,5 @@
 import React from "react";
 import "./browse.css";
-import Sidebar from "../../components/SideBar";
 import Navbar from '../../components/Navbar';
 import BrowseContent from '../../components/browseContent'
 

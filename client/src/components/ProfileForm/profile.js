@@ -17,7 +17,7 @@ export default class ProfileForm extends Component {
 
                             <div class="card-body"></div>
                             <center>
-                                <img src="{require('client/default_profile.png')}" alt="No Photo available"></img><br/>
+                                <img src="{require('client/default_profile.png')}" alt="Not available"></img><br/>
                             <input type="file"/>
                             </center>
 
