@@ -21,7 +21,7 @@ class App extends Component {
     return (
       
     <div className="Container">
-      <div class="body">
+      <div className="body">
     <Router>
           <Switch>
             <Route exact path="/" component={loginPage}/>
@@ -37,8 +37,8 @@ class App extends Component {
           </Switch>
           </Router>
           </div>
-        <div class="row">
-        <div class="col-md-12">
+        <div className="row">
+        <div className="col-md-12">
       <Footer />
       </div>
     </div>

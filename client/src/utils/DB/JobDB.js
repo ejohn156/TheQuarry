@@ -15,7 +15,7 @@ export default {
       });
     },
     update: function(jobData) {
-      return axios.put("/api/s/"+jobData.id)
+      return axios.put("/api/jobs/"+jobData.id)
     },
     getById: function(id) {
       return axios.get("/api/jobs/"+id)

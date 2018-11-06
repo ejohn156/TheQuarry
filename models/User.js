@@ -10,25 +10,25 @@ const userSchema = new Schema({
     },
     firstName: {
         type: String,
-        //required: true,
+        required: true,
     },
     lastName: {
         type: String,
-        //required: true,
+        required: true,
     },
     password: {
         type: String,
-        //required: true,
+        required: true,
     },
     unccID:{
         type: Number,
-        required: "Your Uncc ID is required",
+        required: true,
         index: {unique: true}
     },
     email: {
         type: String,
         match: [/.+@.+\..+/, "Please enter a valid e-mail address"],
-        required: "Email is required",
+        required: true,
         index: {unique: true}
     },
     services: [

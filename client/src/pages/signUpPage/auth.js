@@ -6,9 +6,9 @@ import Auth from '../../components/SignUpAuth';
 const signUpPage = ({ match }) => (
     <div>
     <Navbar page="sign-up"/>
-    <div class="row">
-    <div class="col-md-2"></div>
-    <div class="col-md-8">
+    <div className="row">
+    <div className="col-md-2"></div>
+    <div className="col-md-8">
     <Auth type="signup"/>
     </div>
     </div>

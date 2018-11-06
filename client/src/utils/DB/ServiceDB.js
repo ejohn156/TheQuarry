@@ -15,7 +15,7 @@ export default {
       });
     },
     update: function(ServiceData) {
-      return axios.put("/api/s/"+ServiceData.id)
+      return axios.put("/api/services/"+ServiceData.id)
     },
     getById: function(id) {
       return axios.get("/api/services/"+id)

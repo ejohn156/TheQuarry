@@ -8,41 +8,41 @@ export default class Navbar extends Component {
     }
     render(){
       return(
-    <div class="row">
-    <div class="col-md-12"> 
-    <nav class="navbar navbar-expand-lg navbar-light bg-light"> 
-    <a class="navbar-brand" href="/">The Quarry</a> 
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
+    <div className="row">
+    <div className="col-md-12"> 
+    <nav className="navbar navbar-expand-lg navbar-light bg-light"> 
+    <a className="navbar-brand" href="/">The Quarry</a> 
+    <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span className="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav">
-        <li class={this.state.activePage === "home" ? "nav-item active":"nav-item"}>
-          <a class="nav-link" href="/home">Home <span class="sr-only">(current)</span></a>
+    <div className="collapse navbar-collapse" id="navbarNav">
+      <ul className="navbar-nav">
+        <li className={this.state.activePage === "home" ? "nav-item active":"nav-item"}>
+          <a className="nav-link" href="/home">Home <span className="sr-only">(current)</span></a>
         </li>
-        <li class={this.state.activePage === "browseJob" ? "nav-item active":"nav-item"}>
-          <a class="nav-link" href="/browse/job">Browse Jobs</a>
+        <li className={this.state.activePage === "browseJob" ? "nav-item active":"nav-item"}>
+          <a className="nav-link" href="/browse/job">Browse Jobs</a>
         </li>
-        <li class={this.state.activePage === "browseService" ? "nav-item active":"nav-item"}>
-          <a class="nav-link" href="/browse/service">Browse Services</a>
+        <li className={this.state.activePage === "browseService" ? "nav-item active":"nav-item"}>
+          <a className="nav-link" href="/browse/service">Browse Services</a>
         </li>
-        <li class={this.state.activePage === "profile" ? "nav-item active":"nav-item"}>
-          <a class="nav-link" href="/profile">Profile</a>
+        <li className={this.state.activePage === "profile" ? "nav-item active":"nav-item"}>
+          <a className="nav-link" href="/profile">Profile</a>
         </li>
-        <li class={this.state.activePage === "instructions" ? "nav-item active":"nav-item"}>
-          <a class="nav-link" href="/instruction">Instructions</a>
+        <li className={this.state.activePage === "instructions" ? "nav-item active":"nav-item"}>
+          <a className="nav-link" href="/instruction">Instructions</a>
         </li>
-        <li class={this.state.activePage === "login" ? "nav-item active":"nav-item"}>
-          <a class="nav-link" href="/login">Login</a>
+        <li className={this.state.activePage === "login" ? "nav-item active":"nav-item"}>
+          <a className="nav-link" href="/login">Login</a>
         </li>
-        <li class={this.state.activePage === "sign-up" ? "nav-item active":"nav-item"}>
-          <a class="nav-link" href="/sign-up">Sign Up</a>
+        <li className={this.state.activePage === "sign-up" ? "nav-item active":"nav-item"}>
+          <a className="nav-link" href="/sign-up">Sign Up</a>
         </li>
-        <li class={this.state.activePage === "postJob" ? "nav-item active":"nav-item"}>
-          <a class="nav-link" href="/post/Job">Post a Job</a>
+        <li className={this.state.activePage === "postJob" ? "nav-item active":"nav-item"}>
+          <a className="nav-link" href="/post/Job">Post a Job</a>
         </li>
-        <li class={this.state.activePage === "postService" ? "nav-item active":"nav-item"}>
-          <a class="nav-link" href="/post/Service">Post a Service</a>
+        <li className={this.state.activePage === "postService" ? "nav-item active":"nav-item"}>
+          <a className="nav-link" href="/post/Service">Post a Service</a>
         </li>
       </ul>
     </div>
