@@ -14,16 +14,16 @@ export default class PostForm extends Component {
     <div class = "col-md-1"></div>
     <div class = "postjobcard">
     <div class="card">  
-    <h1>Post a Job</h1>
+    <h1>Post a {this.state.postType}</h1>
 
 <div class="card-body">
     </div>
       <div class="form-group">
-        <label for="JobName">Name of Job</label>
+        <label for="JobName">Name</label>
         <textarea type ="text" class="form-control" id="Job Name" rows="1" placeholder="Job Name"></textarea>
       </div>
       <div class="form-group">
-        <label for="Jobdescription">Job Description</label>
+        <label for="Jobdescription">Job</label>
         <textarea type="text" class="form-control" id="Job Description" rows="4" placeholder="Job Description"></textarea> 
       </div>
 
@@ -39,14 +39,14 @@ export default class PostForm extends Component {
   </form>
   <div class="Price">
   <div class="form-group">
-        <label for="PriceofJob" id="PriceofJob">Price Range of Job</label>
+        <label for="PriceofJob" id="PriceofJob">Price Range</label>
         <textarea type ="text" class="form-control" id="Price" rows="1" placeholder="Price $"></textarea>
       </div>
   </div>
 
 <div class="submitjob">
   <form action="/profile">
-  <button type="submit" class="button">Post Job</button>
+  <button type="submit" class="button">Post {this.state.postType}</button>
   </form>
   </div>
 
