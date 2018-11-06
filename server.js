@@ -4,7 +4,7 @@ const bodyParser = require("body-parser");
 const PORT = process.env.PORT || 3001;
 const mongoose = require("mongoose");
 const axios = require("axios")
-//const routes = require("./routes")
+const routes = require("./routes")
 const app = express();
 
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/theQuarry");
@@ -25,7 +25,7 @@ app.get("*", (req, res) => {
   res.sendFile(path.join(__dirname, "./client/build/index.html"));
 });
 
-//app.use(routes);
+app.use(routes);
 
 app.listen(PORT, () => {
   console.log(`🌎 ==> Server now on port ${PORT}!`);
