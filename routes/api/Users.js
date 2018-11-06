@@ -1,7 +1,7 @@
 const router = require("express").Router();
 const UsersController = require("../../controller/UserController");
 
-// Matches with "/api/Decors"
+
 router.route("/")
   .post(UsersController.create)
   

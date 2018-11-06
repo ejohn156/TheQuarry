@@ -24,7 +24,7 @@ const serviceSchema = new Schema({
         default: Date.now
     },
     hourly:{
-        type: Number.parseFloat,
+        type: Number.parseFloat(),
         require: false,
     }
 });
