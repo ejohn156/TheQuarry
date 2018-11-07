@@ -1,16 +1,260 @@
-/* 
-.col-md-1{
-    background-color:aqua;
+/* css for slidshow */
+#carouselExampleIndicators{
+    position: relative;
+    width:80%; 
+    margin:auto; 
+    margin-top: 1%;
+    margin-bottom: 1%;
+    height: 20em; 
+    background: rgba(0, 112, 60, 0.8);
 }
 
-.col-md-11{
-    background-color:yellow;
-    width: 100%;
-} */
-
-.pic{
-    display: inline-block;
+.slide1{
+    position: relative;
     width:100%;
-    border: 10px;
-    background-color:blue;
+    margin:auto;
+}
+
+.slide-1-div1{
+    position: relative;
+    margin: 0;
+}
+.slide-1-text{
+    text-align: center;
+    font-size: 5em;     /* height for 'welcome to the quarry'*/
+    font-weight: bold;    
+    color: #fff6dc;
+    font-style: italic;
+}
+
+.slide-1-div2{
+    position: relative;
+    height: 170px;
+}
+
+.slide-1-img{
+    position: absolute;
+    height: 420px;
+    width: 420px;
+    opacity: 1;
+    top: -150px;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+/* slide 2 css*/
+.slide2{
+    position: relative;
+    display: inline-flex;
+    width:100%;
+    margin:auto;
+}
+
+.slide-2-img{
+    position: absolute;
+    height: 120px;
+    width: 330px;
+    opacity:1;
+    left: 0; right: 0;
+    margin: auto;
+    top: 20px;
+}
+
+.slide-2-div1, .slide-2-div2{
+    position: relative;
+    margin:auto;
+    top: 15px;
+} 
+
+.slide-2-div1{
+    width: 40%;
+    text-align: center;
+    margin-right:50px;
+}
+.slide-2-div2{
+    width: 30%;
+    margin-left:0; 
+}
+.slide-2-text{
+    color: white;
+    font-size: 30px;
+    font-style: italic;
+    padding-top: 140px; 
+}
+
+ul.slide-2-1-text{
+    color: #fff6dc;
+    list-style-type: none;
+    text-align: left;
+    font-size: 50px;
+    font-weight: 500;
+    text-decoration: underline;
+    text-decoration-color: #F0CB00;
+}
+
+/* Slide 3 css */
+.slide-3{
+    position: relative;
+    display: inline-flex;
+    width:100%;
+    margin:auto;
+}
+
+.slide-3-div1, .slide-3-div2{
+    width: 50%;
+    margin: auto;
+}
+.slide-3-div1{ margin-right:-3%;}
+.slide-3-img{
+    position: relative;
+    height: 250px;
+    width: 90%;
+    opacity: 1;
+    top: 30px;
+}
+
+.slide-3-div2{
+    position: relative;
+    width: 30%;
+    margin-left:0;
+}
+.slide-3-text{
+    color:#fff6dc;
+    text-align: center;
+    font-size: 45px;
+    padding: 20px 30px 20px 30px;
+    font-weight: 500;
+}
+
+/* css for job and service cards*/
+.job-sev-cards{
+    position: relative;
+    width: 80%;
+    margin:auto;
+    display: inline-flex;
+}
+.card-j, .card-s{
+    background: rgba(0,112,60,0.8);
+    width: 49.1%;
+    margin: auto;
+    position: relative;
+}
+.card-j{
+    margin-right: 0;
+    margin-left: 0;
+}
+.card-s{
+    margin-right: 0;
+}
+
+.card-body-js{
+    padding: 1em;
+}
+.card-title-js{
+    color: #fff6dc;
+}
+.card-text-js{
+    font-size: 20px;
+    color: #fff6dc;
+    font-style: italic;
+}
+/* link in job and service card */
+.card-js-links{
+    color: #F0CB00;
+    font-weight: 500;
+    font-size: 20px;
+}
+.card-js-links:hover{
+    color:#F0CB00; 
+}
+
+/* Category cards css */
+.cat-div{
+    position: relative;
+    width: 80%;
+    margin:auto;
+    background-color: rgba(0, 112, 60, 0.8);
+    margin-top:1%;
+}
+.cat-title{
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+.cat-title h3{
+    color: #fff6dc;
+    padding: 0.5em;
+}
+
+.card-cat{
+    position: relative;
+    width: 100%;
+    padding:0px;
+}
+
+.cat-list{
+    display: inline-flex;
+    list-style-type: none;
+    position: relative;
+    padding:0;
+    width: 100%;
+    margin:auto;
+    left:0;
+    right:0;
+}
+.cat-list li:first-child{
+    margin-left: 1.1em;
+}
+.cat-list li{
+    position: relative;
+    background: rgba(240, 203, 0, 0.8);
+    float: left;
+    width: 100%;
+    height: 100px;
+    margin-right:calc((100% - 1000px) / 5 - 1px);
+}
+.cat-list li:hover{background: rgba(240, 203, 0, 1);}
+.cat-lsit li:last-child{
+    margin-right:1.1em;
+}
+.cat-element{
+    margin:auto;
+    background: #fff6dc;
+    position: relative;
+}
+.cat-element img{
+    position: absolute;
+    margin: auto;
+    left: 0; right: 0;
+    margin-top: 10px;
+    width: 55px;    
+}
+.cat-element p{
+    position: absolute;
+    text-align: center;
+    left: 0; right: 0;
+    margin-top: 35%;
+    font-weight: 500;
+}
+
+.cat-more{
+    position: relative;
+    width:100%;
+    margin: auto;
+    padding: 1.1em;
+    text-align: right;
+}
+.cat-link{
+    color:#fff6dc;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 0;
+}
+.cat-link a{ color: #F0CB00;}
+.cat-link a:hover{
+    color: #F0CB00;
+}
+.cat-link p{
+    margin:0; padding:0;
 }
