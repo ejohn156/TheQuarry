@@ -4,7 +4,7 @@ import "./Navbar.css"; /* import Navbar.css*/
 export default class Navbar extends Component {
     //html goes here to design and create navbar
     state = {
-      activePage: this.props.page
+      activePage: this.props.page,
     }
     render(){
       return(
@@ -32,17 +32,18 @@ export default class Navbar extends Component {
         <li class={this.state.activePage === "instructions" ? "nav-item active":"nav-item"}>
           <a class="nav-link" href="/instruction">Instructions</a>
         </li>
-        <li class={this.state.activePage === "login" ? "nav-item active":"nav-item"}>
-          <a class="nav-link" href="/login">Login</a>
-        </li>
-        <li class={this.state.activePage === "sign-up" ? "nav-item active":"nav-item"}>
-          <a class="nav-link" href="/sign-up">Sign Up</a>
-        </li>
+
         <li class={this.state.activePage === "postJob" ? "nav-item active":"nav-item"}>
           <a class="nav-link" href="/post/Job">Post a Job</a>
         </li>
         <li class={this.state.activePage === "postService" ? "nav-item active":"nav-item"}>
           <a class="nav-link" href="/post/Service">Post a Service</a>
+        </li>
+        <li class={this.state.activePage === "sign-up" ? "nav-item active":"nav-item"}>
+          <a class="nav-link" href="/sign-up">Sign Up</a>
+        </li> 
+        <li class={this.state.activePage === "login" ? "nav-item active":"nav-item"}>
+          <a class="nav-link" href="/login">Log In</a>
         </li>
       </ul>
     </div>
