@@ -29,18 +29,22 @@ export default class authContent extends Component{
     <label class="form-check-label" for="exampleCheck1">Remember Me</label>
     </div>
   </div>
+
   <div id="LoginButton">
   <form action="/home">
-  <button type="submit" class="btn btn-primary">Login</button>
+  <button type="submit" class="btn btn-primary">Login</button> 
   </form>
-  </div>
   
+  </div>
+  <p></p>
+<div id="forgotPassword">
+  <a id="nav-link" href="/sign-up">Forgot your username or password?</a>
+  </div>
+  <p></p>
   <div id="SignUpText">
-  <div class="signup">
-  <small id="nologin" class="form-text text-muted">Don't have a login? Signup here.</small>
-  <a class="nav-link" href="/sign-up">Sign-up</a>
+          Don't have an account? <a id="sign-up-link" href="/sign-up">Sign Up</a>
   </div>
-  </div>
+                
   
 </form>
 </div>
