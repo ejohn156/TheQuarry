@@ -31,21 +31,14 @@ export default class authContent extends Component{
   </div>
 
   <div id="LoginButton">
-  <form action="/home">
-<<<<<<< HEAD
+
   <button type="submit" className="btn btn-primary">Login</button>
-=======
-  <button type="submit" class="btn btn-primary">Login</button> 
->>>>>>> 14cb23d4f71ca5aab56d69645528c629cc8aacc0
-  </form>
+</div>
   
-<<<<<<< HEAD
   <div id="SignUpText">
   <div className="signup">
   <small id="nologin" className="form-text text-muted">Don't have a login? Signup here.</small>
   <a className="nav-link" href="/sign-up">Sign-up</a>
-=======
->>>>>>> 14cb23d4f71ca5aab56d69645528c629cc8aacc0
   </div>
   <p></p>
 <div id="forgotPassword">
@@ -56,7 +49,7 @@ export default class authContent extends Component{
           Don't have an account? <a id="sign-up-link" href="/sign-up">Sign Up</a>
   </div>
                 
-  
+  </div>
 </form>
 </div>
 </div>

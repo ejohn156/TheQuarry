@@ -4,28 +4,34 @@ const Schema = mongoose.Schema;
 const serviceSchema = new Schema({
     Title: {
         type: String,
-        required: true
+        required: true,
+        index: {unique: false}
     },
     Description: {
         type: String,
-        required: true
+        required: true,
+        index: {unique: false}
     },
     Owner: {
         type: String,
-        required: true
+        required: true,
+        index: {unique: false}
     },
     Category:{
         type: String,
-        required: true
+        required: true,
+        index: {unique: false}
     },
     Created_at:{
         type: Date,
         required: true,
-        default: Date.now
+        default: Date.now,
+        index: {unique: false}
     },
     hourly:{
-        type: Number.parseFloat(),
+        type: Number,
         require: false,
+        index: {unique: false}
     }
 });
 

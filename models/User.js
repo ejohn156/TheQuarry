@@ -11,14 +11,20 @@ const userSchema = new Schema({
     firstName: {
         type: String,
         required: true,
+        trim: true,
+        index: {unique: false}
     },
     lastName: {
         type: String,
         required: true,
+        trim: true,
+        index: {unique: false}
     },
     password: {
         type: String,
         required: true,
+        trim: true,
+        index: {unique: false}
     },
     unccID:{
         type: Number,
@@ -46,14 +52,20 @@ const userSchema = new Schema({
     major:{
         type: String,
         required: false,
+        trim: true,
+        index: {unique: false}
     },
     work_experience:{
         type: String,
         required: false,
+        trim: true,
+        index: {unique: false}
     },
     about_me:{
         type: String,
         required: false,
+        trim: true,
+        index: {unique: false}
     }
 
 });
