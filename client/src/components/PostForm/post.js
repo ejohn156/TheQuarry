@@ -20,11 +20,11 @@ export default class PostForm extends Component {
     </div>
       <div class="form-group">
         <label for="JobName">Name</label>
-        <textarea type ="text" class="form-control" id="Job Name" rows="1" placeholder="Job Name"></textarea>
+        <textarea type ="text" class="form-control" id="Job Name" rows="1" placeholder={this.state.postType === "Job" ? "Job Name":"Service Name"}></textarea>
       </div>
       <div class="form-group">
         <label for="Jobdescription">Description</label>
-        <textarea type="text" class="form-control" id="Job Description" rows="4" placeholder="Job Description"></textarea> 
+        <textarea type="text" class="form-control" id="Job Description" rows="4" placeholder={this.state.postType === "Job" ? "Job Description":"Service Description"}></textarea> 
       </div>
 
       <form class="form-inline">
