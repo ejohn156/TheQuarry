@@ -68,3 +68,8 @@
         background-color: #4CAF50; /* Green */
         color: white;
     }
+
+    h1 
+    {
+        margin: auto;
+    }
