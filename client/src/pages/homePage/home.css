@@ -261,7 +261,7 @@ ul.slide-2-1-text{
 
 /* drop list css */
 .dropbtn {
-    background-color: rgba(0, 112, 60, 1);
+    background-color: rgba(0, 112, 60, 0);
     color: #fff6dc;
     padding: 5px;
     padding-top:0;

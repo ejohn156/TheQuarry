@@ -150,7 +150,7 @@ const homePage = ({ match }) => (
             <div class="cat-more">
                 <p class="cat-link">View all categories in &nbsp;</p>
                 <div class="dropdown">
-                    <button class="dropbtn">_______&#8744;</button>
+                    <button class="dropbtn">_______&#9660;</button>
                         <div class="dropdown-content">
                             <a href="/browse/job">jobs</a>
                             <a href="/browse/service">services</a>

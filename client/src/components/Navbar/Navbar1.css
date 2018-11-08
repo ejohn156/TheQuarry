@@ -1,0 +1,21 @@
+.dropdown-menu{
+    background-color:rgba(0, 112, 60, 0.9);
+    border-radius: 0;
+}
+
+.dropdown-item{
+    color: #FFF6DC;
+    font-weight: bold;
+}
+
+.dropdown-item:hover{
+    text-decoration: underline;
+    background-color: #FFF6DC;
+}
+.dropdown-item:visited{
+    background-color: #FFF6DC;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
