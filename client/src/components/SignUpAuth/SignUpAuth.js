@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "./SignUpAuth.css";
-import DB from "../../utils/DB/UserDB";
+import DB from "../../utils/DB/ProfileDB";
 
 
 export default class authContent extends Component {

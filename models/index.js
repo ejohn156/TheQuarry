@@ -9,12 +9,12 @@ module.exports.connect = (uri) => {
     process.exit(1);
   });
 
-  require('./user');
+  require('./Profile');
 };
 
 
 module.exports = {
-    User: require("./User"),
-    Server: require("./Service"),
+    Profile: require("./Profile"),
+    Service: require("./Service"),
     Job: require("./Job")
   };

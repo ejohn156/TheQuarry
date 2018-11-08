@@ -18,7 +18,7 @@ module.exports = {
     },
     create: function (req, res) {
         db.Service
-            .create(req.body.ServiceData)
+            .create(req.body).then(dbModel => res.json(dbModel))
             // .then(newService => {
             //     return db.User.findOneAndUpdate({_id: req.body.id}, {$push: {Services: newService._id}}, {new: true})
             // })

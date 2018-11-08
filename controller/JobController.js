@@ -18,7 +18,7 @@ module.exports = {
     },
     create: function (req, res) {
         db.Job
-            .create({title: req.body.title})
+            .create(req.body)
             .then(newJob => res.json(newJob)
                 // return db.User.findOneAndUpdate({_id: req.body.id}, {$push: {Jobs: newJob._id}}, {new: true})
             )
