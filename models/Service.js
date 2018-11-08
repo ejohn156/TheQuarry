@@ -2,37 +2,12 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const serviceSchema = new Schema({
-    Title: {
-        type: String,
-        required: true,
-        index: {unique: false}
-    },
-    Description: {
-        type: String,
-        required: true,
-        index: {unique: false}
-    },
-    Owner: {
-        type: String,
-        required: true,
-        index: {unique: false}
-    },
-    Category:{
-        type: String,
-        required: true,
-        index: {unique: false}
-    },
-    Created_at:{
-        type: Date,
-        required: true,
-        default: Date.now,
-        index: {unique: false}
-    },
-    hourly:{
-        type: Number,
-        require: false,
-        index: {unique: false}
-    }
+    title: {type: String,required: true,unique: false},
+    // Description: {type: String,required: true,unique: false},
+    // Owner: {type: String,required: true,unique: false},
+    // Category:{type: String,required: true,unique: false},
+    // date: { type: Date, default: Date.now, unique: false },
+    // hourly:{type: Number,require: false,unique: false}
 });
 
 const Service = mongoose.model("Service", serviceSchema);

@@ -51,7 +51,7 @@ export default class authContent extends Component {
             authType: this.props.type
         })
 
-        DB.create(newUser)
+        DB.save(newUser)
         
 
 
@@ -74,7 +74,7 @@ export default class authContent extends Component {
                                         <input type="text" className="form-control" id="exampleLastName1" aria-describedby="lastName" placeholder="Last Name" value={this.state.lastName} onChange={this.handleFormChange}></input>
                                     </div>
                                     <div className="form-group">
-                                        <input type="text" className="form-control" id="exampleInputUsername1" placeholder="Username" value={this.state.userName} onChange={this.handleFormChange}></input>
+                                        <input type="text" className="form-control" id="exampleInputUsername1" placeholder="Username" value={this.state.username} onChange={this.handleFormChange}></input>
                                     </div>
                                     <div className="form-group">
                                         <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email Address" value={this.state.email} onChange={this.handleFormChange}></input>
