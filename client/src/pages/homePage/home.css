@@ -34,8 +34,8 @@
 
 .slide-1-img{
     position: absolute;
-    height: 420px;
-    width: 420px;
+    height: 245%; /* h,w: 420px */
+    width: 40%;
     opacity: 1;
     top: -150px;
     left: 0;
@@ -53,8 +53,8 @@
 
 .slide-2-img{
     position: absolute;
-    height: 120px;
-    width: 330px;
+    height: 50%;  /* h:120px, w:330px*/
+    width: 80%;
     opacity:1;
     left: 0; right: 0;
     margin: auto;
@@ -107,9 +107,9 @@ ul.slide-2-1-text{
 }
 .slide-3-div1{ margin-right:-3%;}
 .slide-3-img{
-    position: relative;
-    height: 250px;
-    width: 90%;
+    position: absolute;
+    height: 90%;
+    width: 45%; /* 250px*/
     opacity: 1;
     top: 30px;
 }
@@ -243,12 +243,12 @@ ul.slide-2-1-text{
     width:100%;
     margin: auto;
     padding: 1.1em;
-    text-align: right;
+    display: inline-flex;
 }
 .cat-link{
     color:#fff6dc;
+    font-style: italic;
     font-size: 20px;
-    font-weight: 500;
     padding: 0;
 }
 .cat-link a{ color: #F0CB00;}
@@ -258,3 +258,41 @@ ul.slide-2-1-text{
 .cat-link p{
     margin:0; padding:0;
 }
+
+/* drop list css */
+.dropbtn {
+    background-color: rgba(0, 112, 60, 0);
+    color: #fff6dc;
+    padding: 5px;
+    padding-top:0;
+    border: none;
+    font-size:20px;
+    margin:0;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color:rgba(0, 112, 60, 0.8);
+    width: 84px;
+    z-index: 1;
+    text-align: center;
+}
+
+.dropdown-content a {
+    color: #F0CB00;
+    font-weight: 500;
+    padding: 12px;
+    display: block;
+}
+
+.dropdown-content a:hover {background-color: #00703C;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {background-color: rgba(0, 112, 60, 0.8);}

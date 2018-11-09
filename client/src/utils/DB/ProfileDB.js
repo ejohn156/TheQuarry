@@ -8,9 +8,8 @@ export default {
       return axios.delete("/api/Profiles/" + id);
     },
     save: function(userData) {
-      var usernameObj = {username: userData.username}
-      return axios.post("https://localhost:3001/api/Profiles/add", usernameObj)
-      .then(res => console.log(res.data));
+      
+      return axios.post("/api/profiles/add", userData)
     },
     update: function(userData) {
       return axios.post("/api/Profiles/"+userData.id,{

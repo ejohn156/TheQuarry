@@ -117,7 +117,7 @@ const homePage = ({ match }) => (
                     <li>
                         <div class="cat-element">
                             <img class="cat-img" src={computer} alt="img"/>
-                            <p class="cat-text">IT/Computer</p>
+                            <p class="cat-text">Computer</p>
                         </div>
                     </li>
                     <li>
@@ -148,10 +148,14 @@ const homePage = ({ match }) => (
             </div>
 
             <div class="cat-more">
-                <p class="cat-link">View other categories in &nbsp;
-                    <a href="/browse/job">jobs ></a><p></p>
-                    <a href="/browse/service">services ></a>
-                </p>
+                <p class="cat-link">View all categories in &nbsp;</p>
+                <div class="dropdown">
+                    <button class="dropbtn">_______&#9660;</button>
+                        <div class="dropdown-content">
+                            <a href="/browse/job">jobs</a>
+                            <a href="/browse/service">services</a>
+                        </div>
+                </div>
             </div>
         </div>
     
