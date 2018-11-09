@@ -50,7 +50,7 @@
     
     .button, input[type=file] 
     {
-        background-color: green;
+        background-color: #00703C;
         border: none;
         padding: 10px 24px;
         border-radius: 8px;
@@ -62,6 +62,6 @@
     }
     .button:hover, input[type=file]:hover
     {
-        background-color: #4CAF50; /* Green */
+        background-color: #00703C; /* Green */
         color: white;
     }
