@@ -10,31 +10,35 @@ export default class authContent extends Component{
         return(
             this.state.authType === "login" ? (
 <div>
-<div class = "col-md-1"></div>
-<div class = "signincard">
-<div class="card">
+<div className = "col-md-1"></div>
+<div className = "signincard">
+<div className="card">
 
-<div class="card-body">
+<div className="card-body">
 <form>
     <div id="Login">Login</div>
-    <div class="form-group">
-        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email"></input>
+    <div className="form-group">
+        <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email"></input>
     </div>
-  <div class="form-group">
-    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password"></input>
+  <div className="form-group">
+    <input type="password" className="form-control" id="exampleInputPassword1" placeholder="Password"></input>
   </div>
-  <div class="form-check">
+  <div className="form-check">
     <div id="RememberMe">
-    <input type="checkbox" class="form-check-input" id="exampleCheck1"></input>
-    <label class="form-check-label" for="exampleCheck1">Remember Me</label>
+    <input type="checkbox" className="form-check-input" id="exampleCheck1"></input>
+    <label className="form-check-label" for="exampleCheck1">Remember Me</label>
     </div>
   </div>
 
   <div id="LoginButton">
-  <form action="/home">
-  <button type="submit" class="btn btn-primary">Login</button> 
-  </form>
+
+  <button type="submit" className="btn btn-primary">Login</button>
+</div>
   
+  <div id="SignUpText">
+  <div className="signup">
+  <small id="nologin" className="form-text text-muted">Don't have a login? Signup here.</small>
+  <a className="nav-link" href="/sign-up">Sign-up</a>
   </div>
   <p></p>
 <div id="forgotPassword">
@@ -45,7 +49,7 @@ export default class authContent extends Component{
           Don't have an account? <a id="sign-up-link" href="/sign-up">Sign Up</a>
   </div>
                 
-  
+  </div>
 </form>
 </div>
 </div>

@@ -1,11 +1,11 @@
 const router = require("express").Router();
-const venuesRoutes = require("./Jobs");
-const dressesRoutes = require('./Services')
-const usersRoutes = require("./Users")
+const jobsRoutes = require("./Jobs");
+const servicesRoutes = require('./Services')
+const profilesRoutes = require("./Profiles")
 
-router.use("/jobs", venuesRoutes);
-router.use("/services", dressesRoutes);
-router.use("/users", usersRoutes);
+router.use("/jobs", jobsRoutes);
+router.use("/services", servicesRoutes);
+router.use("/profiles", profilesRoutes);
 
 
 module.exports = router;
