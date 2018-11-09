@@ -6,13 +6,13 @@ import DB from "../../utils/DB/ProfileDB";
 export default class authContent extends Component {
     state = {
         username: "",
-        // password: "",
-        // firstName: "",
-        // lastName: "",
-        // email: "",
-        // unccID: "",
-        // password: "",
-        // confPassword: "",
+        password: "",
+        firstName: "",
+        lastName: "",
+        email: "",
+        unccID: "",
+        password: "",
+        confPassword: "",
         authType: this.props.type
     }
     handleUserChange = event => {
@@ -24,35 +24,65 @@ export default class authContent extends Component {
             // email: event.target.email,
             // unccID: event.target.unccID,
             // password: event.target.password,
-            //confPassword: event.target.confPassword,
+            // confPassword: event.target.confPassword,
         })
-        console.log(this.state.username)
+    }
+    handleUserChange = event => {
+        this.setState({
+            username: event.target.value,
+        })
+    }
+    handlePasswordChange = event => {
+        this.setState({
+            password: event.target.value,
+        })
+    }
+    handleFirstChange = event => {
+        this.setState({
+            firstName: event.target.value,
+        })
+    }
+    handleLastChange = event => {
+        this.setState({
+            lastName: event.target.value,
+        })
+    }
+    handleEmailChange = event => {
+        this.setState({
+            email: event.target.value,
+        })
+    }
+    handleUnccChange = event => {
+        this.setState({
+            unccID: event.target.value,
+        })
+    }
+    handleCpChange = event => {
+        this.setState({
+            confPassword: event.target.value,
+        })
     }
     handleFormSubmit = event => {
         event.preventDefault();
         const newUser = {
             username: this.state.username,
-            // password: this.state.password,
-            // firstName: this.state.firstName,
-            // lastName: this.state.lastName,
-            // email: this.state.email,
-            // unccID: this.state.unccID,
-            // password: this.state.password,
+            password: this.state.password,
+            firstName: this.state.firstName,
+            lastName: this.state.lastName,
+            email: this.state.email,
+            unccID: this.state.unccID,
+            password: this.state.password,
         }
-        console.log(newUser)
-
-        
-
         DB.save(newUser).then(this.setState({
             username: "",
-            // password: "",
-            // firstName: "",
-            // lastName: "",
-            // email: "",
-            // unccID: "",
-            // password: "",
-            // confPassword: "",
-            // authType: this.props.type
+            password: "",
+            firstName: "",
+            lastName: "",
+            email: "",
+            unccID: "",
+            password: "",
+            confPassword: "",
+            authType: this.props.type
         }))
         
 
@@ -69,27 +99,27 @@ export default class authContent extends Component {
                             <div className="card-body">
                                 <form onSubmit={this.handleFormSubmit}>
                                     <div id="RegisterTitle">Register</div>
-                                    {/* <div className="form-group">
-                                        <input type="text" className="form-control" id="exampleInputFirstName1" aria-describedby="firstName" placeholder="First Name" value={this.state.firstName} onChange={this.handleChange}></input>
+                                    <div className="form-group">
+                                        <input type="text" className="form-control" id="exampleInputFirstName1" aria-describedby="firstName" placeholder="First Name" value={this.state.firstName} onChange={this.handleFirstChange}></input>
                                     </div>
                                     <div className="form-group">
-                                        <input type="text" className="form-control" id="exampleLastName1" aria-describedby="lastName" placeholder="Last Name" value={this.state.lastName} onChange={this.handleChange}></input>
-                                    </div> */}
+                                        <input type="text" className="form-control" id="exampleLastName1" aria-describedby="lastName" placeholder="Last Name" value={this.state.lastName} onChange={this.handleLastChange}></input>
+                                    </div>
                                     <div className="form-group">
                                         <input type="text" className="form-control" id="exampleInputUsername1" placeholder="Username" value={this.state.username} onChange={this.handleUserChange}></input>
                                     </div>
-                                    {/* <div className="form-group">
-                                        <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email Address" value={this.state.email} onChange={this.handleChange}></input>
+                                    <div className="form-group">
+                                        <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email Address" value={this.state.email} onChange={this.handleEmailChange}></input>
                                     </div>
                                     <div className="form-group">
-                                        <input type="text" className="form-control" id="exampleunccIDNumber1" placeholder="UNCC ID Number" value={this.state.unccID} onChange={this.handleChange}></input>
+                                        <input type="text" className="form-control" id="exampleunccIDNumber1" placeholder="UNCC ID Number" value={this.state.unccID} onChange={this.handleUnccChange}></input>
                                     </div>
                                     <div className="form-group">
-                                        <input type="password" className="form-control" id="exampleInputPassword1" placeholder="Password" value={this.state.password} onChange={this.handleChange}></input>
+                                        <input type="password" className="form-control" id="exampleInputPassword1" placeholder="Password" value={this.state.password} onChange={this.handlePasswordChange}></input>
                                     </div>
                                     <div className="form-group">
-                                        <input type="password" className="form-control" id="exampleInputConfirmPassword1" placeholder="Confirm Password" value={this.state.confPassword} onChange={this.handleChange}></input>
-                                        </div> */}
+                                        <input type="password" className="form-control" id="exampleInputConfirmPassword1" placeholder="Confirm Password" value={this.state.confPassword} onChange={this.handleCpChange}></input>
+                                        </div>
                                     <br></br>
                                     <div id="RegisterButton">
                                         

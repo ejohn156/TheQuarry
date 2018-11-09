@@ -21,10 +21,6 @@ export default class Navbar extends Component {
         <li className={this.state.activePage === "home" ? "nav-item active":"nav-item"}>
           <a className="nav-link" href="/home">Home <span className="sr-only">(current)</span></a>
         </li>
-<<<<<<< HEAD
-        <li className={this.state.activePage === "browseJob" ? "nav-item active":"nav-item"}>
-          <a className="nav-link" href="/browse/job">Browse Jobs</a>
-=======
 
         <li class={this.state.activePage === "instructions" ? "nav-item active":"nav-item"}>
           <a class="nav-link" href="/instruction">Instructions</a>
@@ -44,24 +40,10 @@ export default class Navbar extends Component {
         {/*
         <li class={this.state.activePage === "browseJob" ? "nav-item active":"nav-item"}>
           <a class="nav-link" href="/browse/job">Browse Jobs</a>
->>>>>>> ed1c68c86ec73e0eb205a21ab18f9b93f2cb3280
         </li>
         <li className={this.state.activePage === "browseService" ? "nav-item active":"nav-item"}>
           <a className="nav-link" href="/browse/service">Browse Services</a>
         </li>
-<<<<<<< HEAD
-        <li className={this.state.activePage === "profile" ? "nav-item active":"nav-item"}>
-          <a className="nav-link" href="/profile">Profile</a>
-        </li>
-        <li className={this.state.activePage === "instructions" ? "nav-item active":"nav-item"}>
-          <a className="nav-link" href="/instruction">Instructions</a>
-        </li>
-        <li className={this.state.activePage === "login" ? "nav-item active":"nav-item"}>
-          <a className="nav-link" href="/login">Login</a>
-        </li>
-        <li className={this.state.activePage === "sign-up" ? "nav-item active":"nav-item"}>
-          <a className="nav-link" href="/sign-up">Sign Up</a>
-=======
         */}
         
         {/*Drop down - Post*/}
@@ -82,20 +64,14 @@ export default class Navbar extends Component {
         {/*
         <li class={this.state.activePage === "postJob" ? "nav-item active":"nav-item"}>
           <a class="nav-link" href="/post/Job">Post a Job</a>
->>>>>>> ed1c68c86ec73e0eb205a21ab18f9b93f2cb3280
         </li>
         <li className={this.state.activePage === "postJob" ? "nav-item active":"nav-item"}>
           <a className="nav-link" href="/post/Job">Post a Job</a>
         </li>
-<<<<<<< HEAD
-        <li className={this.state.activePage === "postService" ? "nav-item active":"nav-item"}>
-          <a className="nav-link" href="/post/Service">Post a Service</a>
-=======
         */}
         
         <li class={this.state.activePage === "login" ? "nav-item active":"nav-item"}>
           <a class="nav-link" href="/login">Log In</a>
->>>>>>> ed1c68c86ec73e0eb205a21ab18f9b93f2cb3280
         </li>
         <li class={this.state.activePage === "sign-up" ? "nav-item active":"nav-item"}>
           <a class="nav-link" href="/sign-up">Sign Up</a>
