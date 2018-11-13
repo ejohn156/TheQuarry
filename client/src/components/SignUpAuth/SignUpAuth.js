@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import "./SignUpAuth.css";
 import DB from "../../utils/DB/ProfileDB";
-
+import { Link } from "react-router-dom";
 
 export default class authContent extends Component {
     state = {
@@ -20,11 +20,7 @@ export default class authContent extends Component {
             username: event.target.value,
         })
     }
-    handleUserChange = event => {
-        this.setState({
-            username: event.target.value,
-        })
-    }
+
     handlePasswordChange = event => {
         this.setState({
             password: event.target.value,
@@ -57,17 +53,7 @@ export default class authContent extends Component {
     }
     handleFormSubmit = event => {
         event.preventDefault();
-
-        const newUser = {
-            username: this.state.username,
-            password: this.state.password,
-            firstName: this.state.firstName,
-            lastName: this.state.lastName,
-            email: this.state.email,
-            unccID: this.state.unccID,
-            password: this.state.password,
-        }
-        
+        const newUser = this.state
         DB.save(newUser).then(this.setState({
             username: "",
             password: "",
@@ -76,17 +62,13 @@ export default class authContent extends Component {
             email: "",
             unccID: "",
             password: "",
-            confPassword: "",
             authType: this.props.type
         }))
-        
-
-
     };
     render() {
         return (
             this.state.authType === "signup" ? (
-                
+
                 <div>
                     <div className="col-md-1"></div>
                     <div className="signincard">
@@ -102,7 +84,7 @@ export default class authContent extends Component {
                                         <input type="text" pattern=".{0,24}" required title="Enter your last name." requiredtitle="Enter your last name." className="form-control" id="exampleLastName1" aria-describedby="lastName" placeholder="Last Name" value={this.state.lastName} onChange={this.handleLastChange}></input>
                                     </div>
                                     <div className="form-group">
-                                        <input type="text" className="form-control" pattern=".{4,24}" required title="Username must be at least 4 characters."id="exampleInputUsername1" placeholder="Username" value={this.state.username} onChange={this.handleUserChange}></input>
+                                        <input type="text" className="form-control" pattern=".{4,24}" required title="Username must be at least 4 characters." id="exampleInputUsername1" placeholder="Username" value={this.state.username} onChange={this.handleUserChange}></input>
                                     </div>
                                     <div className="form-group">
                                         <input type="email" pattern=".{0,24}" required title="Enter your email." className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email Address" value={this.state.email} onChange={this.handleEmailChange}></input>
@@ -115,10 +97,12 @@ export default class authContent extends Component {
                                     </div>
                                     <div className="form-group">
                                         <input type="password" pattern=".{8,24}" required title="Passwords must match." className="form-control" id="exampleInputConfirmPassword1" placeholder="Confirm Password" value={this.state.confPassword} onChange={this.handleCpChange}></input>
-                                        </div>
-                                    
-                                    <div id="RegisterButton">                                       
-                                            <button type="submit" name="register-sumbit" tabIndex="4" className="btn btn-primary">Sign Up</button>
+                                    </div>
+                                    <br></br>
+                                    <div id="RegisterButton">
+
+                                        <button type="submit" name="register-sumbit" tabIndex="4" className="btn btn-primary">Register</button>
+
                                     </div>
 
 
