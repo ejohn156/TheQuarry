@@ -67,6 +67,7 @@ export default class authContent extends Component{
   <Link className="nav-link" to="/sign-up">Sign-up</Link>
   </div>
   <p></p>
+  <div id="SignUpText">
 <div id="forgotPassword">
   <Link id="nav-link" to="/sign-up">Forgot your username or password?</Link>
   </div>
@@ -74,12 +75,15 @@ export default class authContent extends Component{
   <div id="SignUpText">
           Don't have an account? <Link id="sign-up-link" to="/sign-up">Sign Up</Link>
   </div>
-                
+  </div> 
   </div>
 </form>
 </div>
 </div>
 </div>
+<br></br>
+<br></br>
+<p></p>
 </div>):(<h1>Sign In Form Goes Here</h1>)
 
         );

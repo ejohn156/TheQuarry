@@ -50,12 +50,20 @@ export default class Navbar extends Component {
           <Link className="nav-link" to="/profile">Profile</Link>
         </li>
 
+
+        <li class={this.state.activePage === "instructions" ? "nav-item active":"nav-item"}>
+          <a class="nav-link" href="/instruction">FAQ</a>
+        </li>
+
+
         <li className={this.state.activePage === "login" ? "nav-item active":"nav-item"}>
           <Link className="nav-link" to="/login">Log In</Link>
         </li>
+
         <li className={this.state.activePage === "sign-up" ? "nav-item active":"nav-item"}>
           <Link className="nav-link" to="/sign-up">Sign Up</Link>
         </li> 
+
       </ul>
     </div>
   </nav>

@@ -63,12 +63,10 @@ export default class ProfileForm extends Component {
                                 <textarea type="text" class="form-control" id="About" rows="4" placeholder="About"></textarea>
                             </div>
 
-                            <div class="submitprofile">
-    
-                                    <center><button type="submit" class="button">Submit changes</button></center><br/>
-                                
+                            <div id="SubmitButton">                                       
+                                            <center><button type="submit" name="register-sumbit" tabIndex="4" className="btn btn-primary">Submit</button></center>
                             </div>
-
+                            <br></br>
 
                         </div>
                     </div>
