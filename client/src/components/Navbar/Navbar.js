@@ -19,9 +19,6 @@ export default class Navbar extends Component {
     <div className="collapse navbar-collapse" id="navbarNav">
       <ul className="navbar-nav">
       
-        <li class={this.state.activePage === "instructions" ? "nav-item active":"nav-item"}>
-          <a class="nav-link" href="/instruction">Instructions</a>
-        </li>
         
         {/*Drop down - Browse*/}
         <li class="nav-item dropdown">
@@ -47,6 +44,10 @@ export default class Navbar extends Component {
 
         <li class={this.state.activePage === "profile" ? "nav-item active":"nav-item"}>
           <a class="nav-link" href="/profile">Profile</a>
+        </li>
+
+        <li class={this.state.activePage === "instructions" ? "nav-item active":"nav-item"}>
+          <a class="nav-link" href="/instruction">FAQ</a>
         </li>
 
         <li class={this.state.activePage === "login" ? "nav-item active":"nav-item"}>

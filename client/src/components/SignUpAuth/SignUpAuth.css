@@ -25,9 +25,14 @@
     
     #RegisterTitle{
         text-align: center;
-        font-size: 28px;
+        font-size: 2em; 
+        font-weight: bold;
     }
     #RegisterButton{
         text-align: center;
         font-size: 28px;
+    }
+    .signincard
+    {
+        border-style: groove;
     }
