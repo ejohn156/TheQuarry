@@ -10,6 +10,7 @@ import computer from "./images/computer-screen.png";
 import flask from "./images/flask-outline.png";
 import book from "./images/open-book.png";
 import paint from "./images/painter-palette.png";
+import { Link } from "react-router-dom";
 
 const homePage = ({ match }) => (
 <div>
@@ -92,7 +93,7 @@ const homePage = ({ match }) => (
                     <h3 class="card-title-js">Jobs</h3>
                     <p class="card-text-js">Want something done? 
                     Post your job so someone can help you out.</p>
-                    <a class="card-js-links" href="/post/Job">Post a job ></a>
+                    <Link class="card-js-links" to="/post/Job">Post a job ></Link>
                 </div>
             </div>
             {/* service card */}
@@ -101,7 +102,7 @@ const homePage = ({ match }) => (
                     <h3 class="card-title-js">Services</h3>
                     <p class="card-text-js">Got some skills or talents? 
                     Post your service(s) so others can hire you.</p>
-                    <a class="card-js-links" href="/post/Service">Post a service ></a>
+                    <Link class="card-js-links" to="/post/Service">Post a service ></Link>
                 </div>
             </div>
         </div>
@@ -152,8 +153,8 @@ const homePage = ({ match }) => (
                 <div class="dropdown">
                     <button class="dropbtn">_______&#9660;</button>
                         <div class="dropdown-content">
-                            <a href="/browse/job">jobs</a>
-                            <a href="/browse/service">services</a>
+                            <Link to="/browse/job">jobs</Link>
+                            <Link to="/browse/service">services</Link>
                         </div>
                 </div>
             </div>
