@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import "./SignUpAuth.css";
 import DB from "../../utils/DB/ProfileDB";
-
+import { Link } from "react-router-dom";
 
 export default class authContent extends Component {
     state = {
@@ -20,11 +20,7 @@ export default class authContent extends Component {
             username: event.target.value,
         })
     }
-    handleUserChange = event => {
-        this.setState({
-            username: event.target.value,
-        })
-    }
+    
     handlePasswordChange = event => {
         this.setState({
             password: event.target.value,
@@ -57,31 +53,15 @@ export default class authContent extends Component {
     }
     handleFormSubmit = event => {
         event.preventDefault();
-
         const newUser = {
             username: this.state.username,
-            password: this.state.password,
-            firstName: this.state.firstName,
-            lastName: this.state.lastName,
-            email: this.state.email,
-            unccID: this.state.unccID,
-            password: this.state.password,
+            password: this.state.password
         }
-        
         DB.save(newUser).then(this.setState({
             username: "",
             password: "",
-            firstName: "",
-            lastName: "",
-            email: "",
-            unccID: "",
-            password: "",
-            confPassword: "",
             authType: this.props.type
         }))
-        
-
-
     };
     render() {
         return (
@@ -117,9 +97,9 @@ export default class authContent extends Component {
                                         </div>
                                     <br></br>
                                     <div id="RegisterButton">
-                                        
+                                    <Link to="/login">
                                             <button type="submit" name="register-sumbit" tabIndex="4" className="btn btn-primary">Register</button>
-                                        
+                                        </Link>
                                     </div>
 
 
