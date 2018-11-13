@@ -18,13 +18,6 @@ export default class authContent extends Component {
     handleUserChange = event => {
         this.setState({
             username: event.target.value,
-            // password: event.target.password,
-            // firstName: event.target.firstName,
-            // lastName: event.target.lastName,
-            // email: event.target.email,
-            // unccID: event.target.unccID,
-            // password: event.target.password,
-            // confPassword: event.target.confPassword,
         })
     }
     handleUserChange = event => {
@@ -64,6 +57,7 @@ export default class authContent extends Component {
     }
     handleFormSubmit = event => {
         event.preventDefault();
+
         const newUser = {
             username: this.state.username,
             password: this.state.password,
@@ -73,6 +67,7 @@ export default class authContent extends Component {
             unccID: this.state.unccID,
             password: this.state.password,
         }
+        
         DB.save(newUser).then(this.setState({
             username: "",
             password: "",
