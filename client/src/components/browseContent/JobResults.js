@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import JobDB from "../../utils/DB/JobDB"
-
+import "./Results.css"
 
 class JobResults extends Component {
     state = {
@@ -32,7 +32,19 @@ class JobResults extends Component {
     render(){
         return(
         <div>
-        {this.state.jobs.map(job => {return(<li>{job.title}</li>)})}
+        {this.state.jobs.map(job => {return(
+            <div class="card">
+            <div class="card-header"><h2 class="title">{job.title}</h2></div>
+            <div class="card-body">
+            <div class="row">
+                <div class="col-md-4 category"><h5>{job.category}</h5></div>
+                <div class="col-md-5 desc"><p>{job.description}</p></div>
+                <div class="col-md-3 price"><p>Estimate: ${job.estimate}</p></div>
+            </div>
+            </div>
+            </div>
+
+        )})}
         </div>
         )}
 }
