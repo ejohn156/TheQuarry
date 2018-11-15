@@ -4,7 +4,7 @@ const Schema = mongoose.Schema;
 const jobSchema = new Schema({
     title: {type: String,required: true,unique: false},
     description: {type: String,required: true,unique: false},
-    //Owner: {type: String,required: true,unique: false},
+    creator: {type: String,required: true,unique: false},
     category:{type: String,required: true,unique: false},
     //Status: {type: String,default: "Pending",require: true,unique: false},
     date: { type: Date, default: Date.now, unique: false },

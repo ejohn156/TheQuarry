@@ -41,9 +41,10 @@ class ServiceResults extends Component {
             <div class="card-header"><h2 class="title">{service.title}</h2></div>
             <div class="card-body">
             <div class="row">
-                <div class="col-md-4 category"><h5>{service.category}</h5></div>
-                <div class="col-md-5 desc"><p>{service.description}</p></div>
-                <div class="col-md-3 price"><p>Hourly Rate: ${service.hourly}</p></div>
+                <div class="col-md-3"><h4>{service.creator}</h4></div>
+                <div class="col-md-3 category"><h5>{service.category}</h5></div>
+                <div class="col-md-4 desc"><p>{service.description}</p></div>
+                <div class="col-md-2 price"><p>Hourly: ${service.hourly}</p></div>
             </div>
             </div>
             </div>

@@ -4,11 +4,13 @@ import { Link } from "react-router-dom";
 import DB from "../../utils/DB/ProfileDB";
 
 
+
 export default class authContent extends Component{
     state = {
         authType : this.props.type,
         username: "",
-        password: ""
+        password: "",
+        redirect: false
     }
     handleUserChange = event => {
       this.setState({
@@ -27,11 +29,16 @@ export default class authContent extends Component{
         username: this.state.username,
         password: this.state.password
     }
-    alert(User.username + " : " + User.password)
-  
+    DB.login(User.username, User.password)
+    .then(res => {
+        sessionStorage.setItem("username", res.data[0].username)
+        window.location.replace("/")
+        })
+    
 };
 
     render(){
+        
         return(
             this.state.authType === "login" ? (
 <div>
@@ -56,9 +63,9 @@ export default class authContent extends Component{
   </div>
 
   <div id="LoginButton">
-  <Link to="/">
+  
   <button type="submit" className="btn btn-primary">Login</button>
-  </Link>
+  
 </div>
 
   <p></p>
