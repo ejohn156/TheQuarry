@@ -9,7 +9,7 @@ const browsePage = ({ match }) => (
     <div class="row contentArea">
     <div class="col-md-1"></div>
     <div class="col-md-11">
-    <BrowseContent content="Services"/>
+    <BrowseContent content="Services" filter="All"/>
     </div>
     </div>
     </div>

@@ -10,6 +10,9 @@ module.exports = {
         //     .catch(err => res.status(422).json(err))
         db.Job.find({}).then(dbModel => res.json(dbModel)).catch(err => res.status(422).json(err))
     },
+    findFiltered: function(req,res){
+        db.Job.find({category: req.params.filter}).then(dbModel => res.json(dbModel)).catch(err => res.status(422).json(err))
+    },
     findById: function (req, res) {
         db.Job
             .findByID(req.params.id)
