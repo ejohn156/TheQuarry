@@ -4,6 +4,10 @@ export default {
       return axios.get("/api/jobs",{
     });
     },
+    getFiltered: function(filter) {
+      return axios.get("/api/jobs/" + filter,{
+    });
+  },
     delete: function(jobId) {
       return axios.get("/api/jobs/" + jobId,
     {

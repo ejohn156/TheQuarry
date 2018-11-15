@@ -11,6 +11,15 @@ import signUpPage from './pages/signUpPage';
 import loginPage from './pages/loginPage';
 import postJob from './pages/PostJob';
 import postService from './pages/PostService';
+import browseJobArt from './pages/browseJobArt';
+import browseJobMech from './pages/browseJobMech';
+import browseJobAcademic from './pages/browseJobAcademic';
+import browseJobTech from './pages/browseJobTech';
+import browseServiceArt from './pages/browseServiceArt';
+import browseServiceAcademic from './pages/browseServiceAcademic';
+import browseServiceMech from './pages/browseServiceMech';
+import browseServiceTech from './pages/browseServiceTech';
+
 
 
 class App extends Component {
@@ -28,8 +37,16 @@ class App extends Component {
             <Route path="/home" component={homePage}/>
             <Route exact path="/instruction" component={instructionPage}  />
             <Route path="/profile" component={profilePage} />
-            <Route path="/browse/job" component={browseJobPage}/>
-            <Route path="/browse/service" component={browseServicePage}/>
+            <Route exact path="/browse/job" component={browseJobPage}/>
+            <Route exact path="/browse/job/art" component={browseJobArt}/>
+            <Route exact path="/browse/job/academic" component={browseJobAcademic}/>
+            <Route exact path="/browse/job/mechanical" component={browseJobMech}/>
+            <Route exact path="/browse/job/technology" component={browseJobTech}/>
+            <Route exact path="/browse/service" component={browseServicePage}/>
+            <Route exact path="/browse/service/art" component={browseServiceArt}/>
+            <Route exact path="/browse/service/academic" component={browseServiceAcademic}/>
+            <Route exact path="/browse/service/mechanical" component={browseServiceMech}/>
+            <Route exact path="/browse/service/technology" component={browseServiceTech}/>
             <Route exact path="/login" component={loginPage}/>
             <Route exact path="/sign-up" component={signUpPage}/>
             <Route exact path="/post/Job" component={postJob}/>

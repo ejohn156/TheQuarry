@@ -3,15 +3,13 @@ import "./browse.css";
 import Navbar from '../../components/Navbar';
 import BrowseContent from '../../components/browseContent'
 
-const browsePage = () => (
-
-
+const browsePage = ({ match }) => (
   <div>
-    <Navbar page="browseJob"/>
+    <Navbar page="browseService"/>
     <div class="row contentArea">
     <div class="col-md-1"></div>
     <div class="col-md-11">
-    <BrowseContent content="Jobs" filter="All"/>
+    <BrowseContent content="Services" filter="Art"/>
     </div>
     </div>
     </div>

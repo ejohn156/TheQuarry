@@ -5,16 +5,20 @@ import ServiceDB from "../../utils/DB/ServiceDB"
 class ServiceResults extends Component {
     state = {
         
-        services: []
+        services: [],
+        filter: this.props.filter
     }
 
     getServices(){
-        ServiceDB.get()
-        .then(res =>
-        this.setState({services: res.data}))
-        .catch(err => console.log(err));
-    }
-
+        if(this.state.filter === "All"){
+            ServiceDB.get()
+            .then(res =>
+            this.setState({services: res.data}))
+            .catch(err => console.log(err));
+        }else{
+            ServiceDB.getFiltered(this.state.filter).then(res => this.setState({services: res.data}))
+            .catch(err => console.log(err))
+    }}
     componentDidMount() {
         this.getServices()
     }
