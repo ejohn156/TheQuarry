@@ -10,9 +10,8 @@ export default {
     });
     },
     create: function(jobData) {
-      return axios.post("/api/jobs/add", {
-        jobData: jobData,
-      });
+      return axios.post("/api/jobs/add", jobData
+      );
     },
     update: function(jobData) {
       return axios.put("/api/jobs/"+jobData.id)

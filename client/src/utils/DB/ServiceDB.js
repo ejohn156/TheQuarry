@@ -10,9 +10,7 @@ export default {
     });
     },
     create: function(ServiceData) {
-      return axios.post("/api/services/add", {
-        ServiceData: ServiceData,
-      });
+      return axios.post("/api/services/add", ServiceData);
     },
     update: function(ServiceData) {
       return axios.put("/api/services/"+ServiceData.id)
