@@ -72,6 +72,7 @@ export default class PostForm extends Component {
                 <option value="Art">Art</option>
                 <option value="Mechanical">Mechanical</option>
                 <option value="Academic">Academic</option>
+                <option value="Other">Other</option>
               </select>
             </div>
             <div class="form-group">
