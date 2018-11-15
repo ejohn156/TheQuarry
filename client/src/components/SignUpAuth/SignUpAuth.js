@@ -98,11 +98,8 @@ export default class authContent extends Component {
                                     <div className="form-group">
                                         <input type="password" pattern=".{8,24}" required title="Passwords must match." className="form-control" id="exampleInputConfirmPassword1" placeholder="Confirm Password" value={this.state.confPassword} onChange={this.handleCpChange}></input>
                                     </div>
-                                    <br></br>
                                     <div id="RegisterButton">
-
                                         <button type="submit" name="register-sumbit" tabIndex="4" className="btn btn-primary">Sign Up</button>
-
                                     </div>
 
 

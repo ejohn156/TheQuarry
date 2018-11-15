@@ -78,8 +78,10 @@ export default class PostForm extends Component {
               <label htmlFor="PriceofJob">{this.state.postType === "Job" ? "Price Range ($)" : "Hourly Rate ($)"}</label>
               <textarea type="text" class="form-control" id="Price" rows="1" placeholder="" value={this.state.money} onChange={this.handleMoneyChange}></textarea>
             </div>
+            <br></br>
             <div class="form-group">
-            <input type="submit" class="button"></input></div>
+            <center><input type="submit" class="button"></input></center>
+            </div>
           </form>
         </div>
       </div>
