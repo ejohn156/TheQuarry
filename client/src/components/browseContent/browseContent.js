@@ -14,6 +14,7 @@ export default class browseContent extends Component {
     changeFilter = (event) =>(this.setState({filter: event}))
     render() {
         return (
+
             <div class="row">
                 <div class="col-md-2">
                     <div class="btn-group-vertical sidemenu">
@@ -25,7 +26,10 @@ export default class browseContent extends Component {
                     </div>
                 </div>
                 <div class="col-md-8">
-                    
+                    <div class="row">
+                        <div class="col-md-12 header">
+                        <h1>Browsing {this.state.content}</h1></div>
+                    </div>
                     {this.state.content == "Jobs" ?<JobResults />:<ServiceResults />}
                 </div>
             </div>

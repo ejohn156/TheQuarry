@@ -1,6 +1,6 @@
 .sidemenu{
     width: 100%;
-    margin-top: 5%;
+    margin-top: 28%;
 
 }
 .sideHead{
@@ -13,4 +13,6 @@
     color: white;
     border: 1px solid gray;
 }
-
+.header{
+    text-align: center;
+}
