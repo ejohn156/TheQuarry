@@ -1,5 +1,7 @@
-.btn-group-vertical{
+.sidemenu{
     width: 100%;
+    margin-top: 28%;
+
 }
 .sideHead{
     background-color: #F0BC00;
@@ -10,4 +12,7 @@
     background-color: #00703c;
     color: white;
     border: 1px solid gray;
+}
+.header{
+    text-align: center;
 }
