@@ -48,21 +48,23 @@
     
     .button 
     {
-        background-color: green;
-        border: none;
         padding: 10px 24px;
         border-radius: 8px;
-        -webkit-transition-duration: 0.4s; /* Safari */
-        transition-duration: 0.4s;
+        background-color: #00703C;
+        outline: none;
+        color: #fff;
+        font-size: 14px;
+        height: auto;
+        font-weight: normal;
+        border-color: #00703C;  
         width: 100%;
-        color: white; 
-        font-weight: bold;
         
     }
     .button:hover 
     {
-        background-color: #4CAF50; /* Green */
-        color: white;
+        color: #fff;
+        background-color: #C3D7A4;
+        border-color: #C3D7A4;
     }
 
     h1 
