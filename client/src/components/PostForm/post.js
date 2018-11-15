@@ -32,10 +32,11 @@ export default class PostForm extends Component {
       title: this.state.name,
       description: this.state.description,
       estimate: this.state.money,
-      category:this.state.category
+      category:this.state.category,
+      creator: sessionStorage.getItem("username")
     }
 
-    JobDB.create(newJob).then(alert("Job Created"))
+    JobDB.create(newJob).then(window.location.replace("/browse/job"))
   }
   submitService = event => {
     event.preventDefault()
@@ -44,10 +45,11 @@ export default class PostForm extends Component {
       title: this.state.name,
       description: this.state.description,
       hourly: this.state.money,
-      category:this.state.category
+      category:this.state.category,
+      creator: sessionStorage.getItem("username")
     }
 
-    ServiceDB.create(newService).then(alert("Job Created"))
+    ServiceDB.create(newService).then(window.location.replace("/browse/service"))
   }
 
 

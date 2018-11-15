@@ -54,16 +54,7 @@ export default class authContent extends Component {
     handleFormSubmit = event => {
         event.preventDefault();
         const newUser = this.state
-        DB.save(newUser).then(this.setState({
-            username: "",
-            password: "",
-            firstName: "",
-            lastName: "",
-            email: "",
-            unccID: "",
-            password: "",
-            authType: this.props.type
-        }))
+        DB.save(newUser).then(window.location.replace("/login"))
     };
     render() {
         return (

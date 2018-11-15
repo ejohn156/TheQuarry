@@ -14,7 +14,6 @@ export default class browseContent extends Component {
     
     changeFilter = (event) =>{
         this.setState({filter: event})
-        this.render()
     }
     render() {
         return (

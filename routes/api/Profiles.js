@@ -5,6 +5,9 @@ const ProfilesController = require("../../controller/ProfileController");
 router.route("/")
   .get(ProfilesController.find)
 
+  router.route("/login/:username/:password")
+  .get(ProfilesController.login)
+
 router.route('/add')
   .post(ProfilesController.create)
   

@@ -42,9 +42,10 @@ class JobResults extends Component {
             <div class="card-header"><h2 class="title">{job.title}</h2></div>
             <div class="card-body">
             <div class="row">
-                <div class="col-md-4 category"><h5>{job.category}</h5></div>
-                <div class="col-md-5 desc"><p>{job.description}</p></div>
-                <div class="col-md-3 price"><p>Estimate: ${job.estimate}</p></div>
+                <div class="col-md-3"><h4>{job.creator}</h4></div>
+                <div class="col-md-3 category"><h4>{job.category}</h4></div>
+                <div class="col-md-4 desc"><p>{job.description}</p></div>
+                <div class="col-md-2 price"><p>Estimate: ${job.estimate}</p></div>
             </div>
             </div>
             </div>

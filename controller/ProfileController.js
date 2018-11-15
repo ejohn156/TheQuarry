@@ -8,6 +8,13 @@ module.exports = {
             .then(dbModel => res.json(dbModel))
             .catch(err => res.status(422).json(err))
     },
+    login: function (req, res) {
+        db.Profile
+            .find({$and: [{username: req.params.username}, {password: req.params.password}]})
+            .sort({ date: -1 })
+            .then(dbModel => res.json(dbModel))
+            .catch(err => res.status(422).json(err))
+    },
     findById: function (req, res) {
         db.Profile
             .findByID(req.params.id)
