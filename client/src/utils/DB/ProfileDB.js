@@ -4,6 +4,9 @@ export default {
     get: function() {
       return axios.get("/api/Profiles");
     },
+    login: function(username,password) {
+      return axios.get("/api/Profiles/login/"+username+"/"+password);
+    },
     delete: function(id) {
       return axios.delete("/api/Profiles/" + id);
     },

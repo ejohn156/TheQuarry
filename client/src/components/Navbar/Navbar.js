@@ -8,6 +8,12 @@ export default class Navbar extends Component {
     state = {
       activePage: this.props.page,
     }
+
+    logout= event =>{
+      sessionStorage.removeItem("username")
+      window.location.replace("/login")
+    }
+
     render(){
       return(
     <div className="row">
@@ -43,7 +49,7 @@ export default class Navbar extends Component {
         </li>
 
         <li className={this.state.activePage === "profile" ? "nav-item active":"nav-item"}>
-          <Link className="nav-link" to="/profile">Profile</Link>
+          <Link className="nav-link" to="/profile">{sessionStorage.getItem("username")}</Link>
         </li>
 
 
@@ -58,6 +64,9 @@ export default class Navbar extends Component {
 
         <li className={this.state.activePage === "sign-up" ? "nav-item active":"nav-item"}>
           <Link className="nav-link" to="/sign-up">Sign Up</Link>
+        </li> 
+        <li className="logout" value={sessionStorage.getItem("username")} onClick={this.logout}>
+          <Link className="nav-link" to="/">logout</Link>
         </li> 
 
       </ul>
