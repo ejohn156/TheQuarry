@@ -19,10 +19,6 @@ export default class Navbar extends Component {
     </button>
     <div className="collapse navbar-collapse" id="navbarNav">
       <ul className="navbar-nav">
-      
-        <li className={this.state.activePage === "instructions" ? "nav-item active":"nav-item"}>
-          <Link className="nav-link" to="/instruction">Instructions</Link>
-        </li>
         
         {/*Drop down - Browse*/}
         <li className="nav-item dropdown">

@@ -101,7 +101,7 @@ export default class authContent extends Component {
                                     <br></br>
                                     <div id="RegisterButton">
 
-                                        <button type="submit" name="register-sumbit" tabIndex="4" className="btn btn-primary">Register</button>
+                                        <button type="submit" name="register-sumbit" tabIndex="4" className="btn btn-primary">Sign Up</button>
 
                                     </div>
 
