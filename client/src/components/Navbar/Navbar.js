@@ -59,14 +59,14 @@ export default class Navbar extends Component {
 
 
         <li className={this.state.activePage === "login" ? "nav-item active":"nav-item"}>
-          <Link className="nav-link" to="/login">Log In</Link>
+          <Link className="nav-link" to="/login">Login</Link>
         </li>
 
         <li className={this.state.activePage === "sign-up" ? "nav-item active":"nav-item"}>
           <Link className="nav-link" to="/sign-up">Sign Up</Link>
         </li> 
         <li className="logout" value={sessionStorage.getItem("username")} onClick={this.logout}>
-          <Link className="nav-link" to="/">logout</Link>
+          <Link className="nav-link" to="/">Logout</Link>
         </li> 
 
       </ul>

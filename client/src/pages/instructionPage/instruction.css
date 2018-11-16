@@ -10,9 +10,10 @@ body {
   .tab {
     position: relative;
     margin-bottom: 1px;
-    width: 100%;
+    width: 75%;
     color: #fff;
     overflow: hidden;
+    margin: auto;
   }
   .tab input {
     position: absolute;
@@ -27,6 +28,8 @@ body {
     font-weight: bold;
     line-height: 3;
     cursor: pointer;
+    color: white;
+    font-weight: bold;
   }
   .blue label {
     background: #2980b9;
@@ -34,11 +37,12 @@ body {
   .tab-content {
     max-height: 0;
     overflow: hidden;
-    background: #ffffff;
+    background: rgba(160, 189, 117, .80);
     -webkit-transition: max-height .35s;
     -o-transition: max-height .35s;
     transition: max-height .35s;
-    color: black;
+    color: white;
+    font-weight: bold;
   }
   .blue .tab-content {
     background: #3498db;
@@ -79,3 +83,9 @@ body {
   .strong{
       color: black;
   }
+
+    .title{
+        color: black;
+        margin: auto;
+        width: 75%
+      }
