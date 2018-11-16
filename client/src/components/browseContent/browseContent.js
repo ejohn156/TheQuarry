@@ -39,7 +39,7 @@ export default class browseContent extends Component {
                 <div class="col-md-8">
                     <div class="row">
                         <div class="col-md-12 header">
-                        <h1>Browsing {this.state.content}</h1></div>
+                        <h1 className="browseHeader">Browsing {this.state.content}</h1></div>
                     </div>
                     {this.state.content == "Jobs" ?<JobResults filter={this.state.filter}/>:<ServiceResults filter={this.state.filter}/>}
                 </div>
