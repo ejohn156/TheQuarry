@@ -3,7 +3,7 @@
     background-color: rgba(0, 112, 60, 0.8);
     color: #F0BC00;
     height: 40px;
-    position: absolute;
+    position: fixed;
     padding-top:10px;
     padding-bottom:20px;
     left: 0;

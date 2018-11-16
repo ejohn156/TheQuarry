@@ -7,17 +7,28 @@ export default class ProfileForm extends Component {
     }
     render() {
         return (
-            <form>
+            // <form>
                 <div>
 
                     <div class="col-md-1"></div>
                     <div class="profilepagecard">
                         <div class="card">
-                            <h1>Profile</h1>
-
-                            <div class="card-body"></div>
-                            <center>
-                                <img src="{require('client/default_profile.png')}" alt="Not available"></img><br/>
+                            <div class="card-header">
+                            <h2 class="username">{sessionStorage.getItem("username")}</h2>
+                            </div>
+                            <div class="card-body">
+                            <h3 class="profContent">Name: {sessionStorage.getItem("firstName")} {sessionStorage.getItem("lastName")}</h3>
+                            <br/>
+                            <h3 class="profContent">Email: {sessionStorage.getItem("email")}</h3>
+                            <br/>
+                            <h3 class="profContent">Uncc ID: {sessionStorage.getItem("unccID")}</h3>
+                            <br/>
+                            </div>
+                            </div>
+                            </div>
+                            
+                            {/* <center>
+                                <img src={require('client/default_profile.png')} alt="Not available"></img><br/>
                             <input type="file"/>
                             </center>
 
@@ -72,7 +83,8 @@ export default class ProfileForm extends Component {
                     </div>
                 </div>
 
-            </form>
+            </form> */}
+            </div>
 
         )
     }
