@@ -8,57 +8,58 @@ const instructionPage = ({ match }) => (
     <Navbar page="instructions"/>
   
     <div class="wrapper">
-      <div class="strong">
-        <h1><strong>Frequently Asked Questions</strong></h1>
+
+  <br></br>
+  <div class="half">
+    <div class="tab">
+      <input id="tab-one" type="checkbox" name="tabs"/>
+     <label for="tab-one">What is a <i>service</i> defined as?</label>
+      <div class="tab-content">
+        <p>A <i>service</i> is something a student wants to provide or offer to others.</p>
       </div>
-        <br></br>
-        <div class="half">
-          <div class="tab">
-            <input id="tab-one" type="checkbox" name="tabs"/>
-            <label for="tab-one">Question #1</label>
-            <div class="tab-content">
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, architecto, explicabo perferendis nostrum, maxime impedit atque odit sunt pariatur illo obcaecati soluta molestias iure facere dolorum adipisci eum? Saepe, itaque.</p>
-            </div>
-          </div>
-          <div class="tab">
-            <input id="tab-two" type="checkbox" name="tabs"/>
-            <label for="tab-two">Question #2</label>
-            <div class="tab-content">
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, architecto, explicabo perferendis nostrum, maxime impedit atque odit sunt pariatur illo obcaecati soluta molestias iure facere dolorum adipisci eum? Saepe, itaque.</p>
-            </div>
-          </div>
-          <div class="tab">
-            <input id="tab-three" type="checkbox" name="tabs"/>
-            <label for="tab-three">Question #3</label>
-            <div class="tab-content">
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, architecto, explicabo perferendis nostrum, maxime impedit atque odit sunt pariatur illo obcaecati soluta molestias iure facere dolorum adipisci eum? Saepe, itaque.</p>
-            </div>
-          </div>
-          <div class="tab">
-            <input id="tab-two" type="checkbox" name="tabs"/>
-            <label for="tab-two">Question #4</label>
-            <div class="tab-content">
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, architecto, explicabo perferendis nostrum, maxime impedit atque odit sunt pariatur illo obcaecati soluta molestias iure facere dolorum adipisci eum? Saepe, itaque.</p>
-            </div>
-          </div>
-          <div class="tab">
-            <input id="tab-two" type="checkbox" name="tabs"/>
-            <label for="tab-two">Question #5</label>
-            <div class="tab-content">
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, architecto, explicabo perferendis nostrum, maxime impedit atque odit sunt pariatur illo obcaecati soluta molestias iure facere dolorum adipisci eum? Saepe, itaque.</p>
-            </div>
-          </div>
-          <div class="tab">
-            <input id="tab-two" type="checkbox" name="tabs"/>
-            <label for="tab-two">Question #6</label>
-            <div class="tab-content">
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, architecto, explicabo perferendis nostrum, maxime impedit atque odit sunt pariatur illo obcaecati soluta molestias iure facere dolorum adipisci eum? Saepe, itaque.</p>
-            </div>
-          </div>
-          <br></br>
+    </div>
+    <div class="tab">
+      <input id="tab-two" type="checkbox" name="tabs"/>
+      <label for="tab-two">What is a <i>job</i> defined as?</label>
+      <div class="tab-content">
+        <p>A <i>job</i> is something a student requests to be done by someone else.</p>
+      </div>
+    </div>
+    <div class="tab">
+      <input id="tab-three" type="checkbox" name="tabs"/>
+      <label for="tab-three">Who is allowed to use <i>The Quarry?</i></label>
+      <div class="tab-content">
+        <p><i>The Quarry</i> is a University of North Carolina at Charlotte based website. All UNCC students, staff, and faculty are permitted to use the site in its entirety. Anyone outside of the UNCC community is not permitted at this time.</p>
+      </div>
+    </div>
+    <div class="tab">
+      <input id="tab-four" type="checkbox" name="tabs"/>
+      <label for="tab-four">How do I find my <i>UNCC ID number?</i></label>
+      <div class="tab-content">
+      <p><a href="https://aux.uncc.edu/49er-card">Click here</a> for more information regarding your UNCC ID.</p>
+      </div>
+    </div>
+    <div class="tab">
+      <input id="tab-five" type="checkbox" name="tabs"/>
+      <label for="tab-five">Does my <i>username</i> have to be the same as my UNCC login?</label>
+      <div class="tab-content">
+        <p>No, the <i>username</i> you create can be whatever you would like it to be as long as it's appropriate.</p>
+      </div>
+    </div>
+    <div class="tab">
+      <input id="tab-six" type="checkbox" name="tabs"/>
+      <label for="tab-six">My account was <i>banned</i>, what can I do now?</label>
+      <div class="tab-content">
+        <p>If your account is temporarily banned there is no appeal process. However, if your account is temporarily banned you may submit an appeal.</p>
+      </div>
+    </div>
+    <br></br>
+    <br></br>
+    <br></br>
+
   </div>
   
- 
+
 </div>
     
 
