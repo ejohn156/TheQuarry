@@ -118,13 +118,13 @@ const homePage = ({ match }) => (
                     <li>
                         <div class="cat-element">
                             <img class="cat-img" src={computer} alt="img"/>
-                            <p class="cat-text">Computer</p>
+                            <p class="cat-text">Technology</p>
                         </div>
                     </li>
                     <li>
                         <div class="cat-element">
                             <img class="cat-img" src={car} alt="img"/>
-                            <p class="cat-text">Auto</p>
+                            <p class="cat-text">Mechanical</p>
                         </div>
                     </li>
                     <li>
@@ -142,7 +142,7 @@ const homePage = ({ match }) => (
                     <li>
                         <div class="cat-element">
                             <img class="cat-img" src={book} alt="img"/>
-                            <p class="cat-text">Tutoring</p>
+                            <p class="cat-text">Academic</p>
                         </div>
                     </li>
                 </ul> 

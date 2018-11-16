@@ -8,6 +8,7 @@ const instructionPage = ({ match }) => (
     <Navbar page="instructions"/>
   
     <div class="wrapper">
+
   <br></br>
   <div class="half">
     <div class="tab">
@@ -55,6 +56,7 @@ const instructionPage = ({ match }) => (
     <br></br>
     <br></br>
     <br></br>
+
   </div>
   
 

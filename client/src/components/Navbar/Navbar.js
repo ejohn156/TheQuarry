@@ -54,7 +54,7 @@ export default class Navbar extends Component {
 
 
         <li class={this.state.activePage === "instructions" ? "nav-item active":"nav-item"}>
-          <a class="nav-link" href="/instruction">FAQ</a>
+          <Link className="nav-link" to="/instruction">FAQ</Link>
         </li>
 
 

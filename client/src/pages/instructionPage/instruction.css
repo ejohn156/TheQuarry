@@ -4,14 +4,17 @@ body {
   }
   h1 {
     text-align: center;
+    color: #FFF6DC;
   }
  
   /* Acordeon styles */
   .tab {
     position: relative;
     margin-bottom: 1px;
+
     width: 75%;
     color: #fff;
+
     overflow: hidden;
     margin: auto;
   }
@@ -24,7 +27,7 @@ body {
     position: relative;
     display: block;
     padding: 0 0 0 1em;
-    background: rgba(0, 112, 60, 0.8);
+    background: rgba(240, 203, 0, 0.8);
     font-weight: bold;
     line-height: 3;
     cursor: pointer;
@@ -37,7 +40,9 @@ body {
   .tab-content {
     max-height: 0;
     overflow: hidden;
+
     background: rgba(160, 189, 117, .80);
+
     -webkit-transition: max-height .35s;
     -o-transition: max-height .35s;
     transition: max-height .35s;
@@ -84,8 +89,18 @@ body {
       color: black;
   }
 
+
     .title{
         color: black;
         margin: auto;
         width: 75%
       }
+
+  .wrapper{
+    width: 80%;
+    margin: auto;
+    margin-top: 1%;
+    background-color: rgba(0 ,112,60,0.8);
+    padding: 2%;
+  }
+
