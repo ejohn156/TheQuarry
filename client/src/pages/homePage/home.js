@@ -93,7 +93,7 @@ const homePage = ({ match }) => (
                     <h3 class="card-title-js">Jobs</h3>
                     <p class="card-text-js">Want something done? 
                     Post your job so someone can help you out.</p>
-                    <Link class="card-js-links" to="/post/Job">Post a job ></Link>
+                    <Link class="card-js-links" to={sessionStorage.getItem("username") == undefined ? "/login":"/post/Job"}>Post a job ></Link>
                 </div>
             </div>
             {/* service card */}
@@ -102,7 +102,7 @@ const homePage = ({ match }) => (
                     <h3 class="card-title-js">Services</h3>
                     <p class="card-text-js">Got some skills or talents? 
                     Post your service(s) so others can hire you.</p>
-                    <Link class="card-js-links" to="/post/Service">Post a service ></Link>
+                    <Link class="card-js-links" to={sessionStorage.getItem("username") == undefined ? "/login":"/post/Service"}>Post a service ></Link>
                 </div>
             </div>
         </div>

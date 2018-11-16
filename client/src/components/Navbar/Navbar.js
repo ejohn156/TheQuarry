@@ -36,7 +36,20 @@ export default class Navbar extends Component {
             <Link className="dropdown-item" to="/browse/service">Services</Link>
           </div>
         </li>
-        
+
+        {sessionStorage.getItem("username") == undefined ? (<div className="collapse navbar-collapse" id="navbarNav">
+        <li class={this.state.activePage === "instructions" ? "nav-item active":"nav-item"}>
+          <Link className="nav-link" to="/instruction">FAQ</Link>
+        </li>
+        <li className={this.state.activePage === "login" ? "nav-item active":"nav-item"}>
+          <Link className="nav-link" to="/login">Login</Link>
+        </li>
+
+        <li className={this.state.activePage === "sign-up" ? "nav-item active":"nav-item"}>
+          <Link className="nav-link" to="/sign-up">Sign Up</Link>
+        </li> 
+        </div>):(<div className="collapse navbar-collapse" id="navbarNav">
+
         {/*Drop down - Post*/}
         <li className="nav-item dropdown">
           <Link className="nav-link dropdown-toggle" to="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -47,28 +60,17 @@ export default class Navbar extends Component {
             <Link className="dropdown-item" to="/post/Service">Services</Link>
           </div>
         </li>
-
-        <li className={this.state.activePage === "profile" ? "nav-item active":"nav-item"}>
-          <Link className="nav-link" to="/profile">{sessionStorage.getItem("username")}</Link>
-        </li>
-
-
         <li class={this.state.activePage === "instructions" ? "nav-item active":"nav-item"}>
           <Link className="nav-link" to="/instruction">FAQ</Link>
         </li>
-
-
-        <li className={this.state.activePage === "login" ? "nav-item active":"nav-item"}>
-          <Link className="nav-link" to="/login">Login</Link>
+          <li className={this.state.activePage === "profile" ? "nav-item active":"nav-item"}>
+          <Link className="nav-link" to="/profile">{sessionStorage.getItem("username")}</Link>
         </li>
-
-        <li className={this.state.activePage === "sign-up" ? "nav-item active":"nav-item"}>
-          <Link className="nav-link" to="/sign-up">Sign Up</Link>
-        </li> 
         <li className="logout" value={sessionStorage.getItem("username")} onClick={this.logout}>
           <Link className="nav-link" to="/">Logout</Link>
         </li> 
-
+        </div>)
+        }
       </ul>
     </div>
   </nav>
