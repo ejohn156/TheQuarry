@@ -11,7 +11,11 @@ export default class Navbar extends Component {
 
     logout= event =>{
       sessionStorage.removeItem("username")
-      window.location.replace("/login")
+      sessionStorage.removeItem("email")
+      sessionStorage.removeItem("lastName")
+      sessionStorage.removeItem("firstName")
+      sessionStorage.removeItem("unccID")
+      window.location.replace("/")
     }
 
     render(){
