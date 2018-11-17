@@ -43,6 +43,30 @@ export default class browseContent extends Component {
                     </div>
                     {this.state.content == "Jobs" ?<JobResults filter={this.state.filter}/>:<ServiceResults filter={this.state.filter}/>}
                 </div>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
             </div>
         );
     }

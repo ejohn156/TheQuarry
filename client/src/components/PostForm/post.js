@@ -19,7 +19,6 @@ export default class PostForm extends Component {
     this.setState({description: event.target.value})
    }
   handleCategoryChange = event => {
-    alert(event.target.value)
     this.setState({category: event.target.value})
    }
   handleMoneyChange = event => {
@@ -36,7 +35,7 @@ export default class PostForm extends Component {
       creator: sessionStorage.getItem("username")
     }
 
-    JobDB.create(newJob).then(window.location.replace("/browse/job"))
+    JobDB.create(newJob).then(window.location.replace("/browse/job/" + this.state.category))
   }
   submitService = event => {
     event.preventDefault()
@@ -49,7 +48,7 @@ export default class PostForm extends Component {
       creator: sessionStorage.getItem("username")
     }
 
-    ServiceDB.create(newService).then(window.location.replace("/browse/service"))
+    ServiceDB.create(newService).then(window.location.replace("/browse/service/"+this.state.category))
   }
 
 
@@ -77,7 +76,7 @@ export default class PostForm extends Component {
               </select>
             </div>
             <div class="form-group">
-              <label htmlFor="PriceofJob">{this.state.postType === "Job" ? "Price Range ($)" : "Hourly Rate ($)"}</label>
+              <label htmlFor="PriceofJob">{this.state.postType === "Job" ? "Price ($)" : "Hourly Rate ($)"}</label>
               <textarea type="text" class="form-control" id="Price" rows="1" placeholder="" value={this.state.money} onChange={this.handleMoneyChange}></textarea>
             </div>
             <br></br>
