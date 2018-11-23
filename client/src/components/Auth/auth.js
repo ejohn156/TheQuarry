@@ -31,6 +31,7 @@ export default class authContent extends Component{
     }
     DB.login(User.username, User.password)
     .then(res => {
+        sessionStorage.setItem("id", res.data[0]._id)
         sessionStorage.setItem("username", res.data[0].username)
         sessionStorage.setItem("firstName", res.data[0].firstName)
         sessionStorage.setItem("lastName", res.data[0].lastName)
