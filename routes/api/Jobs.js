@@ -4,13 +4,12 @@ const JobsController = require("../../controller/JobController");
 
 router.route("/")
   .get(JobsController.find)
-  
+
 router.route("/:filter")
   .get(JobsController.findFiltered)
   
  router.route('/add')
  .post(JobsController.create)
-
   
 router.route('/update/:id')
   .post(JobsController.update)
