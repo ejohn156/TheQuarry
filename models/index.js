@@ -17,5 +17,6 @@ module.exports = {
     Profile: require("./Profile"),
     Service: require("./Service"),
     Job: require("./Job"),
-    Request: require("./Request")
+    Request: require("./Request"),
+    Application: require("./Application")
   };
