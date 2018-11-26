@@ -33,7 +33,8 @@ export default class PostForm extends Component {
       description: this.state.description,
       estimate: this.state.money,
       category:this.state.category,
-      creator: sessionStorage.getItem("username")
+      creator: sessionStorage.getItem("username"),
+      creatorID: sessionStorage.getItem("id")
     }
 
     JobDB.create(newJob).then(window.location.replace("/browse/job"))
@@ -46,7 +47,8 @@ export default class PostForm extends Component {
       description: this.state.description,
       hourly: this.state.money,
       category:this.state.category,
-      creator: sessionStorage.getItem("username")
+      creator: sessionStorage.getItem("username"),
+      creatorID: sessionStorage.getItem("id")
     }
 
     ServiceDB.create(newService).then(window.location.replace("/browse/service"))

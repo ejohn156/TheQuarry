@@ -2,42 +2,40 @@ const db = require("../models")
 
 module.exports = {
     find: function (req, res) {
-        // db.User
-        //     .findOne({_id: req.body.id})
-        //     .populate("jobs")
-        //     .sort({ date: -1 })
-        //     .then(dbModel => res.json(dbModel))
-        //     .catch(err => res.status(422).json(err))
-        db.Job.find({}).then(dbModel => res.json(dbModel)).catch(err => res.status(422).json(err))
+        db.Application
+            .find({})
+//            .sort({ date: -1 })
+            .then(dbModel => res.json(dbModel))
+            .catch(err => res.status(422).json(err))
     },
     findFiltered: function(req,res){
         db.Job.find({category: req.params.filter}).then(dbModel => res.json(dbModel)).catch(err => res.status(422).json(err))
     },
     findById: function (req, res) {
-        db.Job
+        db.Application
             .findByID(req.params.id)
             .then(dbModel => res.json(dbModel))
             .catch(err => res.status(422).json(err))
     },
     create: function (req, res) {
         console.log(req.body)
-        db.Job
+        db.Application
             .create(req.body)
-            .then(newJob => res.json(newJob))
-                // return db.User.findOneAndUpdate({_id: req.body.id}, {$push: {Jobs: newJob._id}}, {new: true})
+            .then(dbModel => res.json(dbModel))
             .catch(err => res.status(422).json(err));
     },
+    
     update: function (req, res) {
-        db.Job
+        db.Application
             .findOneAndUpdate({ _id: req.params.id }, req.body)
             .then(dbModel => res.json(dbModel))
             .catch(err => res.status(422).json(err));
     },
     delete: function (req, res) {
-        db.Job
+        db.Application
             .findById(req.params.id)
             .then(dbModel => dbModel.remove())
             .then(dbModel => res.json(dbModel))
             .catch(err => res.status(422).json(err));
-    }
-}
+},
+};

@@ -16,5 +16,7 @@ module.exports.connect = (uri) => {
 module.exports = {
     Profile: require("./Profile"),
     Service: require("./Service"),
-    Job: require("./Job")
+    Job: require("./Job"),
+    Request: require("./Request"),
+    Application: require("./Application")
   };
