@@ -1,13 +1,16 @@
 {
-  "main.css": "/static/css/main.6534f154.chunk.css",
-  "main.js": "/static/js/main.0a61e959.chunk.js",
-  "main.js.map": "/static/js/main.0a61e959.chunk.js.map",
-  "static/js/1.782ad059.chunk.js": "/static/js/1.782ad059.chunk.js",
-  "static/js/1.782ad059.chunk.js.map": "/static/js/1.782ad059.chunk.js.map",
+  "main.css": "/static/css/main.030e63cc.chunk.css",
+  "main.js": "/static/js/main.37cebd63.chunk.js",
+  "main.js.map": "/static/js/main.37cebd63.chunk.js.map",
+  "static/js/1.89924fda.chunk.js": "/static/js/1.89924fda.chunk.js",
+  "static/js/1.89924fda.chunk.js.map": "/static/js/1.89924fda.chunk.js.map",
   "runtime~main.js": "/static/js/runtime~main.229c360f.js",
   "runtime~main.js.map": "/static/js/runtime~main.229c360f.js.map",
-  "static/css/main.6534f154.chunk.css.map": "/static/css/main.6534f154.chunk.css.map",
+  "static/css/main.030e63cc.chunk.css.map": "/static/css/main.030e63cc.chunk.css.map",
+  "static/media/49-logo.png": "/static/media/49-logo.334bf917.png",
+  "static/media/App.css": "/static/media/background-student-union.3e0fab3b.png",
+  "static/media/students-1.jpg": "/static/media/students-1.c0b071ee.jpg",
   "index.html": "/index.html",
-  "precache-manifest.e08c386698234f4289e70c6d685580dc.js": "/precache-manifest.e08c386698234f4289e70c6d685580dc.js",
+  "precache-manifest.5514c4894d6455545348d8a274236ae7.js": "/precache-manifest.5514c4894d6455545348d8a274236ae7.js",
   "service-worker.js": "/service-worker.js"
 }
