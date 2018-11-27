@@ -4,13 +4,20 @@ import ServiceDB from "../../utils/DB/ServiceDB"
 
 class ServiceResults extends Component {
     state = {
-        
+        type: this.props.type,
         services: [],
         filter: this.props.filter
     }
 
+
+    getUsersServices(){
+            
+        ServiceDB.getUsersServices(sessionStorage.getItem("id")).then(
+            res => this.setState({services: res.data.services}))
+    
+}
     getServices(){
-        if(this.state.filter === "All"){
+        if(this.state.filter === "All" ){
             ServiceDB.get()
             .then(res =>
             this.setState({services: res.data}))
@@ -20,7 +27,10 @@ class ServiceResults extends Component {
             .catch(err => console.log(err))
     }}
     componentDidMount() {
+        if(this.state.type === "browse")
         this.getServices()
+        else if(this.state.type === "profile")
+        this.getUsersServices()
     }
 
     // componentDidUpdate() {

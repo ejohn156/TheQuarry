@@ -4,39 +4,45 @@ import "./Results.css"
 
 class JobResults extends Component {
     state = {
+        type: this.props.type,
         filter: this.props.filter,
-        jobs: []
+        jobs: [],
+    }
+
+    getUsersJob(){
+            
+            JobDB.getUsersJobs(sessionStorage.getItem("id")).then(
+                res => this.setState({jobs: res.data.jobs}))
+                //res => console.log(res.data.jobs))
+        
     }
 
     getJobs(){
-        if(this.state.filter === "All"){
+        if(this.state.filter === "All" && this.state.type === "browse"){
         JobDB.get()
         .then(res =>
         this.setState({jobs: res.data}))
         .catch(err => console.log(err));
-    }else{
+    }
+    else if(this.state.filter != "All" && this.state.type === "browse"){
         JobDB.getFiltered(this.state.filter).then(res => this.setState({jobs: res.data}))
         .catch(err => console.log(err))
     }
     }
 
     componentDidMount() {
+        if(this.state.type === "browse")
         this.getJobs()
+        else if(this.state.type === "profile")
+        this.getUsersJob()
     }
 
-    // componentDidUpdate() {
-    //     this.getVenues();
-    // }
-    // deleteVenue = (id) => {
-    //     alert(`Venue Deleted`)
-    //     DB.delete(id).then(this.getVenues())
-    //     this.getVenues()
-        
-    // }
-
     render(){
+        
         return(
+            
         <div>
+            
         {this.state.jobs.map(job => {return(
             <div class="card">
             <div class="card-header"><h2 class="title">{job.title}</h2></div>
@@ -51,7 +57,7 @@ class JobResults extends Component {
             </div>
 
         )})}
-        </div>
+            </div>
         )}
 }
 export default JobResults;

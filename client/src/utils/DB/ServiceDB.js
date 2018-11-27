@@ -4,8 +4,12 @@ export default {
       return axios.get("/api/services",{
     });
     },
+    getUsersServices: function(id) {
+      return axios.get("/api/services/" + id,{
+    });
+    },
     getFiltered: function(filter) {
-      return axios.get("/api/services/" + filter,{
+      return axios.get("/api/services/filter/" + filter,{
     });
   },
     delete: function(ServiceId) {

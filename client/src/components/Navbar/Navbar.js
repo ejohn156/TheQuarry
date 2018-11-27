@@ -16,11 +16,6 @@ export default class Navbar extends Component {
     }
     logout= event =>{
       sessionStorage.removeItem("id")
-      // sessionStorage.removeItem("username")
-      // sessionStorage.removeItem("email")
-      // sessionStorage.removeItem("lastName")
-      // sessionStorage.removeItem("firstName")
-      // sessionStorage.removeItem("unccID")
       window.location.replace("/")
     }
 
@@ -73,8 +68,18 @@ export default class Navbar extends Component {
         <li class={this.state.activePage === "instructions" ? "nav-item active":"nav-item"}>
           <Link className="nav-link" to="/instruction">FAQ</Link>
         </li>
-          <li className={this.state.activePage === "profile" ? "nav-item active":"nav-item"}>
-          <Link className="nav-link" to="/profile">{this.state.user.username}</Link>
+          {/* <li className={this.state.activePage === "profile" ? "nav-item active":"nav-item"}>
+          <Link className="nav-link" to="/profile">{this.state.user.username}</Link> */}
+          <li className="nav-item dropdown">
+          <Link className="nav-link dropdown-toggle" to="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            {this.state.user.username}
+          </Link>
+          <div className="dropdown-menu" aria-labelledby="navbarDropdown">
+            <Link className="dropdown-item" to="/profile">View Profile</Link>
+            <Link className="dropdown-item" to="/profile/edit">Edit Profile</Link>
+            <Link className="dropdown-item" to="/profile/Jobs">View Jobs</Link>
+            <Link className="dropdown-item" to="/profile/Services">View Services</Link>
+          </div>
         </li>
         <li className="logout" value={this.state.user.username} onClick={this.logout}>
           <Link className="nav-link" to="/">Logout</Link>

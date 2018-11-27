@@ -8,16 +8,17 @@ import { Link } from "react-router-dom";
 export default class browseContent extends Component {
     state = {
         content: this.props.content,
+        type: this.props.type,
         filter: this.props.filter,
-        user: {}
     }
     changeFilter = (event) =>{
         this.setState({filter: event})
     }
     render() {
         return (
-
+            
             <div class="row">
+            {this.state.type === "browse" ?
                 <div class="col-md-2">
                     <div class="btn-group-vertical sidemenu">
                     <Link to={this.state.content === "Jobs" ? "/browse/job":"/browse/service"}><button type="button" class={this.state.filter === "All" ? "btn sideHead":"btn sidebtn"} onClick={(event) => this.changeFilter("All")}>{this.state.filter === "All" ? "Categories":"All"}</button></Link>
@@ -34,13 +35,13 @@ export default class browseContent extends Component {
                         <button type="button" class={this.state.filter === "Mechanical" ? "btn sideHead":"btn sidebtn"} onClick={(event) => this.changeFilter("Mechanical")}>Mechanical</button>
                         </Link>
                     </div>
-                </div>
+                </div>:<div class="col-md-2"></div>}
                 <div class="col-md-8">
                     <div class="row">
                         <div class="col-md-12 header">
-                        <h1 className="browseHeader">Browsing {this.state.content}</h1></div>
+                        <h1 className="browseHeader">Browsing {this.state.type === "profile" ? "My ":""}{this.state.content}</h1></div>
                     </div>
-                    {this.state.content == "Jobs" ?<JobResults filter={this.state.filter}/>:<ServiceResults filter={this.state.filter}/>}
+                    {this.state.content == "Jobs" ?<JobResults filter={this.state.filter} type={this.state.type}/>:<ServiceResults filter={this.state.filter} type={this.state.type}/>}
                 </div>
                 <br/>
                 <br/>
