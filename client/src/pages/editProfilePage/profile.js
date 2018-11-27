@@ -1,7 +1,7 @@
 import React from "react";
 import "./profile.css";
 import Navbar from '../../components/Navbar'
-import ProfileForm from '../../components/ProfileForm'
+import EditProfile from '../../components/ProfileForm/editProfile'
 
 const editProfilePage = ({ match }) => (
 
@@ -10,8 +10,7 @@ const editProfilePage = ({ match }) => (
     <div class="row">
     <div class="col-md-1"></div>
     <div class="col-md-11">
-    <h5>Edit Profile</h5>
-    <ProfileForm type="Page"/>
+    <EditProfile type="Page"/>
 
 
 
