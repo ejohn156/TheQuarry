@@ -11,7 +11,7 @@ const browsePage = () => (
     <div class="row contentArea">
     <div class="col-md-1"></div>
     <div class="col-md-11">
-    <BrowseContent content="Jobs" filter="Mechanical"/>
+    <BrowseContent content="Jobs" filter="Mechanical" type="browse"/>
     </div>
     </div>
     </div>

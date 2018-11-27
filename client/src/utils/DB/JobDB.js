@@ -4,8 +4,12 @@ export default {
       return axios.get("/api/jobs",{
     });
     },
+    getUsersJobs: function(id) {
+      return axios.get("/api/jobs/" + id,{
+    });
+    },
     getFiltered: function(filter) {
-      return axios.get("/api/jobs/" + filter,{
+      return axios.get("/api/jobs/filter/" + filter,{
     });
   },
     delete: function(jobId) {
@@ -13,11 +17,6 @@ export default {
     {
     });
     },
-    
-    save: function(userData) {
-      return axios.post("/api/jobs/add", userData)
-    },
-
     create: function(jobData) {
       return axios.post("/api/jobs/add", jobData
       );

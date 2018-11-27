@@ -15,7 +15,7 @@ router.route('/update/:id')
   .post(ProfilesController.update)
 
 router.route('/:id')
-  .get(ProfilesController.findById)
+  .get(ProfilesController.getById)
 
 router.route("/delete/:id")
 .post(ProfilesController.delete)

@@ -4,8 +4,9 @@ const JobsController = require("../../controller/JobController");
 
 router.route("/")
   .get(JobsController.find)
-
-router.route("/:filter")
+  router.route("/:id")
+  .get(JobsController.findUsersJobs)
+router.route("/filter/:filter")
   .get(JobsController.findFiltered)
   
  router.route('/add')

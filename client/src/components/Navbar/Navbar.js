@@ -2,19 +2,20 @@ import React, { Component } from "react";
 import "./Navbar.css"; /* import Navbar.css*/
 import "./Navbar1.css";
 import { Link } from "react-router-dom";
-
+import ProfileDB from "../../utils/DB/ProfileDB";
 export default class Navbar extends Component {
     //html goes here to design and create navbar
     state = {
       activePage: this.props.page,
+      user: {}
     }
 
+    componentDidMount(){
+      var id = sessionStorage.getItem("id")
+      ProfileDB.getById(id).then(res => this.setState({user: res.data}))
+    }
     logout= event =>{
-      sessionStorage.removeItem("username")
-      sessionStorage.removeItem("email")
-      sessionStorage.removeItem("lastName")
-      sessionStorage.removeItem("firstName")
-      sessionStorage.removeItem("unccID")
+      sessionStorage.removeItem("id")
       window.location.replace("/")
     }
 
@@ -41,7 +42,7 @@ export default class Navbar extends Component {
           </div>
         </li>
 
-        {sessionStorage.getItem("username") == undefined ? (<div className="collapse navbar-collapse" id="navbarNav">
+        {this.state.user.username == undefined ? (<div className="collapse navbar-collapse" id="navbarNav">
         <li class={this.state.activePage === "instructions" ? "nav-item active":"nav-item"}>
           <Link className="nav-link" to="/instruction">FAQ</Link>
         </li>
@@ -67,10 +68,20 @@ export default class Navbar extends Component {
         <li class={this.state.activePage === "instructions" ? "nav-item active":"nav-item"}>
           <Link className="nav-link" to="/instruction">FAQ</Link>
         </li>
-          <li className={this.state.activePage === "profile" ? "nav-item active":"nav-item"}>
-          <Link className="nav-link" to="/profile">{sessionStorage.getItem("username")}</Link>
+          {/* <li className={this.state.activePage === "profile" ? "nav-item active":"nav-item"}>
+          <Link className="nav-link" to="/profile">{this.state.user.username}</Link> */}
+          <li className="nav-item dropdown">
+          <Link className="nav-link dropdown-toggle" to="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            {this.state.user.username}
+          </Link>
+          <div className="dropdown-menu" aria-labelledby="navbarDropdown">
+            <Link className="dropdown-item" to="/profile">View Profile</Link>
+            <Link className="dropdown-item" to="/profile/edit">Edit Profile</Link>
+            <Link className="dropdown-item" to="/profile/Jobs">View Jobs</Link>
+            <Link className="dropdown-item" to="/profile/Services">View Services</Link>
+          </div>
         </li>
-        <li className="logout" value={sessionStorage.getItem("username")} onClick={this.logout}>
+        <li className="logout" value={this.state.user.username} onClick={this.logout}>
           <Link className="nav-link" to="/">Logout</Link>
         </li> 
         </div>)

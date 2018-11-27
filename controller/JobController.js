@@ -2,16 +2,24 @@ const db = require("../models")
 
 module.exports = {
     find: function (req, res) {
-        // db.User
+        // db.Profile
         //     .findOne({_id: req.body.id})
         //     .populate("jobs")
         //     .sort({ date: -1 })
         //     .then(dbModel => res.json(dbModel))
         //     .catch(err => res.status(422).json(err))
-        db.Job.find({}).then(dbModel => res.json(dbModel)).catch(err => res.status(422).json(err))
+        db.Job.find({}).sort({date: -1}).then(dbModel => res.json(dbModel)).catch(err => res.status(422).json(err))
+    },
+    findUsersJobs: function(req,res){
+        db.Profile
+            .findOne({_id: req.params.id})
+            .populate("jobs")
+            .sort({ date: -1 })
+            .then(dbModel => res.json(dbModel))
+            .catch(err => res.status(422).json(err))
     },
     findFiltered: function(req,res){
-        db.Job.find({category: req.params.filter}).then(dbModel => res.json(dbModel)).catch(err => res.status(422).json(err))
+        db.Job.find({category: req.params.filter}).sort({date: -1}).then(dbModel => res.json(dbModel)).catch(err => res.status(422).json(err))
     },
     findById: function (req, res) {
         db.Job
@@ -20,11 +28,10 @@ module.exports = {
             .catch(err => res.status(422).json(err))
     },
     create: function (req, res) {
-        console.log(req.body)
         db.Job
             .create(req.body)
-            .then(newJob => res.json(newJob))
-                // return db.User.findOneAndUpdate({_id: req.body.id}, {$push: {Jobs: newJob._id}}, {new: true})
+            .then(newJob => {
+                return db.Profile.findOneAndUpdate({_id: req.body.creatorID}, {$push: {jobs: newJob._id}}, {new: true})})
             .catch(err => res.status(422).json(err));
     },
     update: function (req, res) {

@@ -4,7 +4,9 @@ const ServicesController = require("../../controller/ServiceController");
 // Matches with "/api/Services"
 router.route("/")
   .get(ServicesController.find)
-  router.route("/:filter")
+  router.route("/:id")
+  .get(ServicesController.findUsersServices)
+  router.route("/filter/:filter")
   .get(ServicesController.findFiltered)
   
 router.route('/add')

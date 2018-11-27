@@ -19,6 +19,9 @@ import browseServiceArt from './pages/browseServiceArt';
 import browseServiceAcademic from './pages/browseServiceAcademic';
 import browseServiceMech from './pages/browseServiceMech';
 import browseServiceTech from './pages/browseServiceTech';
+import myJobPage from "./pages/myJobsPage";
+import myServicePage from "./pages/myServicesPage";
+import editProfilePage from "./pages/editProfilePage"
 
 
 
@@ -36,7 +39,10 @@ class App extends Component {
             <Route exact path="/" component={homePage}/>
             <Route path="/home" component={homePage}/>
             <Route exact path="/instruction" component={instructionPage}  />
-            <Route path="/profile" component={profilePage} />
+            <Route exact path="/profile" component={profilePage} />
+            <Route exact path="/profile/edit" component={editProfilePage} />
+            <Route exact path="/profile/jobs" component={myJobPage} />
+            <Route exact path="/profile/services" component={myServicePage} />
             <Route exact path="/browse/job" component={browseJobPage}/>
             <Route exact path="/browse/job/art" component={browseJobArt}/>
             <Route exact path="/browse/job/academic" component={browseJobAcademic}/>
