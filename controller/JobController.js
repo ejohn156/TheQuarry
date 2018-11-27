@@ -8,10 +8,10 @@ module.exports = {
         //     .sort({ date: -1 })
         //     .then(dbModel => res.json(dbModel))
         //     .catch(err => res.status(422).json(err))
-        db.Job.find({}).then(dbModel => res.json(dbModel)).catch(err => res.status(422).json(err))
+        db.Job.find({}).sort({date: -1}).then(dbModel => res.json(dbModel)).catch(err => res.status(422).json(err))
     },
     findFiltered: function(req,res){
-        db.Job.find({category: req.params.filter}).then(dbModel => res.json(dbModel)).catch(err => res.status(422).json(err))
+        db.Job.find({category: req.params.filter}).sort({date: -1}).then(dbModel => res.json(dbModel)).catch(err => res.status(422).json(err))
     },
     findById: function (req, res) {
         db.Job

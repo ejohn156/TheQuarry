@@ -13,11 +13,6 @@ export default {
     {
     });
     },
-    
-    save: function(userData) {
-      return axios.post("/api/jobs/add", userData)
-    },
-
     create: function(jobData) {
       return axios.post("/api/jobs/add", jobData
       );

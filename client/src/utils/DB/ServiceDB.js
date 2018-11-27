@@ -13,10 +13,6 @@ export default {
     {
     });
     },
-    
-    save: function(userData) {
-      return axios.post("/api/services/add", userData)
-    },
 
     create: function(ServiceData) {
       return axios.post("/api/services/add", ServiceData);
