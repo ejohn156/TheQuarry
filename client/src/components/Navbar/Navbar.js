@@ -2,19 +2,25 @@ import React, { Component } from "react";
 import "./Navbar.css"; /* import Navbar.css*/
 import "./Navbar1.css";
 import { Link } from "react-router-dom";
-
+import ProfileDB from "../../utils/DB/ProfileDB";
 export default class Navbar extends Component {
     //html goes here to design and create navbar
     state = {
       activePage: this.props.page,
+      user: {}
     }
 
+    componentDidMount(){
+      var id = sessionStorage.getItem("id")
+      ProfileDB.getById(id).then(res => this.setState({user: res.data}))
+    }
     logout= event =>{
-      sessionStorage.removeItem("username")
-      sessionStorage.removeItem("email")
-      sessionStorage.removeItem("lastName")
-      sessionStorage.removeItem("firstName")
-      sessionStorage.removeItem("unccID")
+      sessionStorage.removeItem("id")
+      // sessionStorage.removeItem("username")
+      // sessionStorage.removeItem("email")
+      // sessionStorage.removeItem("lastName")
+      // sessionStorage.removeItem("firstName")
+      // sessionStorage.removeItem("unccID")
       window.location.replace("/")
     }
 
@@ -41,7 +47,7 @@ export default class Navbar extends Component {
           </div>
         </li>
 
-        {sessionStorage.getItem("username") == undefined ? (<div className="collapse navbar-collapse" id="navbarNav">
+        {this.state.user.username == undefined ? (<div className="collapse navbar-collapse" id="navbarNav">
         <li class={this.state.activePage === "instructions" ? "nav-item active":"nav-item"}>
           <Link className="nav-link" to="/instruction">FAQ</Link>
         </li>
@@ -68,9 +74,9 @@ export default class Navbar extends Component {
           <Link className="nav-link" to="/instruction">FAQ</Link>
         </li>
           <li className={this.state.activePage === "profile" ? "nav-item active":"nav-item"}>
-          <Link className="nav-link" to="/profile">{sessionStorage.getItem("username")}</Link>
+          <Link className="nav-link" to="/profile">{this.state.user.username}</Link>
         </li>
-        <li className="logout" value={sessionStorage.getItem("username")} onClick={this.logout}>
+        <li className="logout" value={this.state.user.username} onClick={this.logout}>
           <Link className="nav-link" to="/">Logout</Link>
         </li> 
         </div>)

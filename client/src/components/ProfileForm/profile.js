@@ -1,9 +1,15 @@
 import React, { Component } from "react";
 import "./profile.css";
+import ProfileDB from "../../utils/DB/ProfileDB";
 
 export default class ProfileForm extends Component {
     state = {
-        profileType: this.props.type
+        profileType: this.props.type,
+        user: {}
+    }
+    componentDidMount() {
+        var id = sessionStorage.getItem("id")
+        ProfileDB.getById(id).then(res => this.setState({user: res.data}))
     }
     render() {
         return (
@@ -14,14 +20,14 @@ export default class ProfileForm extends Component {
                     <div class="profilepagecard">
                         <div class="card">
                             <div class="card-header">
-                            <h2 class="username">{sessionStorage.getItem("username")}</h2>
+                            <h2 class="username">{this.state.user.username}</h2>
                             </div>
                             <div class="card-body">
-                            <h3 class="profContent">Name: {sessionStorage.getItem("firstName")} {sessionStorage.getItem("lastName")}</h3>
+                            <h3 class="profContent">Name: {this.state.user.firstName} {this.state.user.lastName}</h3>
                             <br/>
-                            <h3 class="profContent">Email: {sessionStorage.getItem("email")}</h3>
+                            <h3 class="profContent">Email: {this.state.user.email}</h3>
                             <br/>
-                            <h3 class="profContent">Uncc ID: {sessionStorage.getItem("unccID")}</h3>
+                            <h3 class="profContent">Uncc ID: {this.state.user.unccID}</h3>
                             <br/>
                             </div>
                             </div>

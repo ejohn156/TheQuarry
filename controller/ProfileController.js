@@ -15,9 +15,9 @@ module.exports = {
             .then(dbModel => res.json(dbModel))
             .catch(err => res.status(422).json(err))
     },
-    findById: function (req, res) {
+    getById: function (req, res) {
         db.Profile
-            .findByID(req.params.id)
+            .findById(req.params.id)
             .then(dbModel => res.json(dbModel))
             .catch(err => res.status(422).json(err))
     },

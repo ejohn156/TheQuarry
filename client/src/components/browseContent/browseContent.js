@@ -8,10 +8,9 @@ import { Link } from "react-router-dom";
 export default class browseContent extends Component {
     state = {
         content: this.props.content,
-        filter: this.props.filter
+        filter: this.props.filter,
+        user: {}
     }
-    
-    
     changeFilter = (event) =>{
         this.setState({filter: event})
     }

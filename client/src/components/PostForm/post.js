@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import "./post.css";
 import ServiceDB from "../../utils/DB/ServiceDB"
 import JobDB from "../../utils/DB/JobDB";
+import ProfileDB from "../../utils/DB/ProfileDB";
 
 
 export default class PostForm extends Component {
@@ -10,7 +11,13 @@ export default class PostForm extends Component {
     name: "",
     description: "",
     money: "",
-    category: "Technology"
+    category: "Technology",
+    user: {}
+  }
+
+  componentDidMount(){
+    var id = sessionStorage.getItem("id")
+    ProfileDB.getById(id).then(res => this.setState({user: res.data}))
   }
   handleNameChange = event => { 
     this.setState({name: event.target.value})
@@ -32,7 +39,7 @@ export default class PostForm extends Component {
       description: this.state.description,
       estimate: this.state.money,
       category:this.state.category,
-      creator: sessionStorage.getItem("username"),
+      creator: this.state.user.username,
       creatorID: sessionStorage.getItem("id")
     }
 
@@ -46,7 +53,7 @@ export default class PostForm extends Component {
       description: this.state.description,
       hourly: this.state.money,
       category:this.state.category,
-      creator: sessionStorage.getItem("username"),
+      creator: this.state.user.username,
       creatorID: sessionStorage.getItem("id")
     }
 
