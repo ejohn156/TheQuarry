@@ -29,6 +29,14 @@ export default class ProfileForm extends Component {
                             <br/>
                             <h3 class="profContent">Uncc ID: {this.state.user.unccID}</h3>
                             <br/>
+                            <h3 class="profContent">Major: {this.state.user.major}</h3>
+                            <br/>
+                            <h3>About Me:</h3>
+                            <p>{this.state.user.about_me}</p>
+                            <br/>
+                            <h3>Work Experience:</h3>
+                            <p>{this.state.user.work_experience}</p>
+                            <br/>
                             </div>
                             </div>
                             </div>

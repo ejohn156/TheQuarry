@@ -16,8 +16,7 @@ export default {
     },
     
     update: function(userData) {
-      return axios.post("/api/Profiles/"+userData.id,{
-          id:userData.id,
+      return axios.post("/api/Profiles/edit/"+userData._id,{
           data: userData
     })
     },
