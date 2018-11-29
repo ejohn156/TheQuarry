@@ -11,7 +11,7 @@ router.route("/")
 router.route('/add')
   .post(ProfilesController.create)
   
-router.route('/update/:id')
+router.route('/edit/:id')
   .post(ProfilesController.update)
 
 router.route('/:id')
