@@ -17,8 +17,8 @@ export default class ProfileForm extends Component {
                 <div>
 
                     <div class="col-md-1"></div>
-                    <div class="pagecard">
-                        <div class="card">
+                    <div class="pagecardd">
+                        <div class="profilecard">
                             <div class="card-header">
                             <h2 class="username">{this.state.user.username}</h2>
                             </div>
