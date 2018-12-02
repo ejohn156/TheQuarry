@@ -61,6 +61,7 @@ export default class authContent extends Component{
     <label className="form-check-label" for="exampleCheck1">Remember Me</label>
     </div>
   </div>
+  <p></p>
 
   <div id="LoginButton">
   
@@ -70,9 +71,6 @@ export default class authContent extends Component{
 
   <p></p>
   <div id="SignUpText">
-<div id="forgotPassword">
-  <Link id="nav-link" to="/sign-up">Forgot your username or password?</Link>
-  </div>
   <p></p>
   <div id="SignUpText">
           Don't have an account? <Link id="sign-up-link" to="/sign-up">Sign Up</Link>
@@ -82,6 +80,7 @@ export default class authContent extends Component{
 </div>
 </div>
 </div>
+<br></br>
 <br></br>
 <br></br>
 <p></p>

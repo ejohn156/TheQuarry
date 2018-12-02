@@ -68,15 +68,15 @@ export default class PostForm extends Component {
         <div class="card-body">
           <form onSubmit={this.state.postType === "Job" ? this.submitJob:this.submitService}>
             <div class="form-group">
-              <label htmlFor="JobName">Name</label>
+              <label htmlFor="JobName" id="JobName">Name</label>
               <textarea type="text" class="form-control" id="Job Name" rows="1" placeholder={this.state.postType === "Job" ? "Job Name" : "Service Name"} value={this.state.name} onChange={this.handleNameChange}></textarea>
             </div>
             <div class="form-group">
-              <label htmlFor="Jobdescription">Description</label>
+              <label htmlFor="Jobdescription" id="Jobdescription">Description</label>
               <textarea type="text" class="form-control" id="Job Description" rows="4" placeholder={this.state.postType === "Job" ? "Job Description" : "Service Description"} value={this.state.description} onChange={this.handleDescriptionChange}></textarea>
             </div>
             <div class="form-group">
-              <label htmlFor="inlineFormCustomSelect">Category</label>
+              <label htmlFor="inlineFormCustomSelect"><label id="FormCustomSelect">Category</label></label>
               <select class="form-control" id="inlineFormCustomSelect" onChange={this.handleCategoryChange}>
                 <option value="Technology" >Technology</option>
                 <option value="Art">Art</option>
@@ -90,7 +90,7 @@ export default class PostForm extends Component {
             </div>
             <br></br>
             <div class="form-group">
-            <center><input type="submit" class="button"></input></center>
+            <center><input type="submit" class="btn btnn-primary" id="postButton"></input></center>
             </div>
           </form>
         </div>

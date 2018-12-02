@@ -17,7 +17,7 @@ export default class ProfileForm extends Component {
                 <div>
 
                     <div class="col-md-1"></div>
-                    <div class="profilepagecard">
+                    <div class="pagecard">
                         <div class="card">
                             <div class="card-header">
                             <h2 class="username">{this.state.user.username}</h2>
@@ -31,10 +31,10 @@ export default class ProfileForm extends Component {
                             <br/>
                             <h3 class="profContent">Major: {this.state.user.major}</h3>
                             <br/>
-                            <h3>About Me:</h3>
+                            <h3 class="profContent">About Me:</h3>
                             <p>{this.state.user.about_me}</p>
                             <br/>
-                            <h3>Work Experience:</h3>
+                            <h3 class="profContent">Work Experience:</h3>
                             <p>{this.state.user.work_experience}</p>
                             <br/>
                             </div>
