@@ -1,23 +1,19 @@
-.signincard {
-    width: 50%;
-    
-    margin: auto;
-    margin-top: 3%; 
-    }
-
 #Login{
     text-align: center;
     font-size: 2em; 
     font-weight: bold;
+    color: white;
 }
 
 #SignUpText{
     text-align: center;
     font-size: 14px;
+    color: white;
 }
 #RememberMe{
     text-align: center;
     font-size: 14px;
+    color: white;
 }
 #LoginButton{
     text-align: center;
@@ -26,4 +22,29 @@
 #forgotPassword{
     text-align: center;
     font-size: 14px;
+}
+.card{
+    background: rgba(0, 112, 60, 0.8);
+}
+#sign-up-link{
+    color: rgba(240, 203, 0);
+}
+.profContent{
+    color: white;
+}
+.username{
+    color: white;
+}
+.pagecard{
+    width: 50%;
+        margin: 0 auto;
+        margin-top: 3%;
+        margin-bottom: 8%;
+}
+.profilecard{
+    width: 50%;
+    margin-left: 19%;
+    margin-top: 3%;
+    margin-bottom: 8%;
+    background: rgba(0, 112, 60, 0.8);
 }

@@ -6,7 +6,7 @@
     }
 .postHeader{
     text-align: center;
-    color: #00703C
+    color: white;
 }
     .postjobcard {
         width: 50%;
@@ -33,8 +33,6 @@
         font-size: 16px;
     }
     
-    
-    
     .postjobcard 
     {
         border-style: groove;
@@ -46,29 +44,29 @@
         margin-top: 3%;
         
     }
-    
-    .button 
+    h1 
     {
-        padding: 10px 24px;
-        border-radius: 8px;
-        background-color: #00703C;
+        margin: auto;
+    }
+    #JobName, #Jobdescription, #FormCustomSelect, #PriceOfJob, .form-group{
+        color: white;
+    }
+
+    .btnn-primary {
+        background-color: rgba(240, 203, 0, 0.8);
         outline: none;
         color: #fff;
         font-size: 14px;
         height: auto;
         font-weight: normal;
+        padding: 14px 0;
         border-color: #00703C;  
-        width: 100%;
-        
+        width: 85%;
+        justify-content: center;
     }
-    .button:hover 
-    {
+    .btnn-primary:hover,
+    .btnn-primary:focus {
         color: #fff;
         background-color: #C3D7A4;
         border-color: #C3D7A4;
-    }
-
-    h1 
-    {
-        margin: auto;
     }
