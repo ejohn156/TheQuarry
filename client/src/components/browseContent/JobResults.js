@@ -69,7 +69,12 @@ class JobResults extends Component {
             
         <div>
             
-        {this.state.jobs.map(job => {return(
+        {this.state.jobs.map(job => {
+            if(job.creatorID === sessionStorage.getItem("id") & this.state.type === "browse"){
+                return(<div></div>)
+            }
+            else{
+            return(
             <div class="card">
             <div class="card-header"><h2 class="title">{job.title}</h2></div>
             <div class="card-body">
@@ -83,7 +88,7 @@ class JobResults extends Component {
             </div>
             </div>
             </div>
-        )})}
+        )}})}
             </div>
         )}
 }

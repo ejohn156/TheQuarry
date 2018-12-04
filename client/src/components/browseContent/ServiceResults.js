@@ -62,7 +62,12 @@ class ServiceResults extends Component {
         }
         return(
         <div>
-        {this.state.services.map(service => {return(
+        {this.state.services.map(service => {
+            if(service.creatorID === sessionStorage.getItem("id") & this.state.type === "browse"){
+                return(<div></div>)
+            }
+            else{
+            return(
             <div class="card">
             <div class="card-header"><h2 class="title">{service.title}</h2></div>
             <div class="card-body">
@@ -76,7 +81,7 @@ class ServiceResults extends Component {
             </div>
             </div>
 
-        )})}
+        )}})}
         </div>
         )}
 }

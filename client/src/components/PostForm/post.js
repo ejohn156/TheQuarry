@@ -67,12 +67,12 @@ export default class PostForm extends Component {
     if(this.state.submitted === true){
       if(this.state.postType === "Job"){
       return(
-        <Redirect to={"/browse/job/" + this.state.category}/>
+        <Redirect to="/profile/Jobs"/>
       )
       }
       else{
         return(
-          <Redirect to={"/browse/service/" + this.state.category}/>
+          <Redirect to="/profile/Services"/>
         )
       }
     }
