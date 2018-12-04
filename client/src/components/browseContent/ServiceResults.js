@@ -33,15 +33,19 @@ class ServiceResults extends Component {
         this.getUsersServices()
     }
 
-    // componentDidUpdate() {
-    //     this.getVenues();
-    // }
-    // deleteVenue = (id) => {
-    //     alert(`Venue Deleted`)
-    //     DB.delete(id).then(this.getVenues())
-    //     this.getVenues()
-        
-    // }
+    handleApplication(subject){
+        if(sessionStorage.getItem("id") === null){
+            window.location.replace("/login")
+        }else{
+            sessionStorage.setItem("subject", subject) 
+            window.location.replace("/apply")
+        }
+    }
+    handleDelete(subject){
+        ServiceDB.delete(subject).then(window.location.reload())
+        }
+    
+
 
     render(){
         return(
@@ -55,6 +59,7 @@ class ServiceResults extends Component {
                 <div class="col-md-3 category"><h5>{service.category}</h5></div>
                 <div class="col-md-4 desc"><p>{service.description}</p></div>
                 <div class="col-md-2 price"><p>Hourly: ${service.hourly}</p></div>
+                <div class="col-md-1 apply"><button onClick={(subject) => this.state.type === "browse" ? this.handleApplication(service._id) : this.handleDelete(service._id)}>{this.state.type === "browse" ? "Request" : "Delete"}</button></div>
             </div>
             </div>
             </div>
