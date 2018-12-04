@@ -39,16 +39,17 @@ class JobResults extends Component {
     }
 
     handleApplication(subject){
-        //alert(sessionStorage.getItem("id"))
         if(sessionStorage.getItem("id") === null){
             window.location.replace("/login")
         }else{
             sessionStorage.setItem("subject", subject) 
             window.location.replace("/apply")
-            //alert(sessionStorage.getItem("subject")) 
-        
         }
     }
+    handleDelete(subject){
+        JobDB.delete(subject).then(window.location.reload())
+        }
+    
 
     render(){
         
@@ -66,7 +67,7 @@ class JobResults extends Component {
                 <div class="col-md-3 category"><h4>{job.category}</h4></div>
                 <div class="col-md-4 desc"><p>{job.description}</p></div>
                 <div class="col-md-1 price"><p>Estimate: ${job.estimate}</p></div>
-                <div class="col-md-1 apply"><button onClick={(subject) => this.handleApplication(job._id)}>Apply</button></div>
+                <div class="col-md-1 apply"><button onClick={(subject) => this.state.type === "browse" ? this.handleApplication(job._id) : this.handleDelete(job._id)}>{this.state.type === "browse" ? "Apply" : "Delete"}</button></div>
             </div>
             </div>
             </div>
