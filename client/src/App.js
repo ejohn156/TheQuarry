@@ -22,7 +22,7 @@ import browseServiceTech from './pages/browseServiceTech';
 import myJobPage from "./pages/myJobsPage";
 import myServicePage from "./pages/myServicesPage";
 import editProfilePage from "./pages/editProfilePage"
-
+import applyPage from "./pages/ApplyPage"
 
 
 class App extends Component {
@@ -57,6 +57,7 @@ class App extends Component {
             <Route exact path="/sign-up" component={signUpPage}/>
             <Route exact path="/post/Job" component={postJob}/>
             <Route exact path="/post/Service" component={postService}/>
+            <Route exact path="/apply" component={applyPage}/>
           </Switch>
           </Router>
           </div>
