@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import "./SignUpAuth.css";
 import DB from "../../utils/DB/ProfileDB";
-import { Link } from "react-router-dom";
+import { Redirect } from "react-router-dom";
 
 export default class authContent extends Component {
     state = {
@@ -13,7 +13,8 @@ export default class authContent extends Component {
         unccID: "",
         password: "",
         confPassword: "",
-        authType: this.props.type
+        authType: this.props.type,
+        submitted: false
     }
     handleUserChange = event => {
         this.setState({
@@ -54,9 +55,14 @@ export default class authContent extends Component {
     handleFormSubmit = event => {
         event.preventDefault();
         const newUser = this.state
-        DB.save(newUser).then(window.location.replace("/login"))
+        DB.save(newUser).then(this.setState({submitted: true}))
     };
     render() {
+        if(this.state.submitted === true){
+            return(
+            <Redirect to="/login"/>
+            )
+        }
         return (
             this.state.authType === "signup" ? (
 

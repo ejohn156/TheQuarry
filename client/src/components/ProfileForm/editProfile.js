@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import "./profile.css";
 import ProfileDB from "../../utils/DB/ProfileDB";
+import {Redirect} from "react-router-dom"
 
 export default class editProfileForm extends Component {
     state = {
@@ -12,7 +13,8 @@ export default class editProfileForm extends Component {
         email: "",
         major: "",
         about: "",
-        workExperience: ""
+        workExperience: "",
+        submitted: false
     }
     componentDidMount() {
         var id = sessionStorage.getItem("id")
@@ -78,9 +80,14 @@ export default class editProfileForm extends Component {
         updatedUser.email = this.state.email
         updatedUser.about_me = this.state.about_me
         updatedUser.work_experience = this.state.work_experience
-        ProfileDB.update(updatedUser).then(window.location.replace("/profile"))
+        ProfileDB.update(updatedUser).then(this.setState({submitted: true}))
     };
     render() {
+        if(this.state.submitted === true){
+            return(
+            <Redirect to="/profile"/>
+            )
+        }
         return (
             <div>
             <div class="row">

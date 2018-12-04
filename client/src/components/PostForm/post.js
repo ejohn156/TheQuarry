@@ -3,6 +3,7 @@ import "./post.css";
 import ServiceDB from "../../utils/DB/ServiceDB"
 import JobDB from "../../utils/DB/JobDB";
 import ProfileDB from "../../utils/DB/ProfileDB";
+import {Redirect} from "react-router-dom"
 
 
 export default class PostForm extends Component {
@@ -12,7 +13,8 @@ export default class PostForm extends Component {
     description: "",
     money: "",
     category: "Technology",
-    user: {}
+    user: {},
+    submitted: false
   }
 
   componentDidMount(){
@@ -43,7 +45,7 @@ export default class PostForm extends Component {
       creatorID: sessionStorage.getItem("id")
     }
 
-    JobDB.create(newJob).then(window.location.replace("/browse/job/" + this.state.category))
+    JobDB.create(newJob).then(this.setState({submitted: true}))
   }
   submitService = event => {
     event.preventDefault()
@@ -62,6 +64,11 @@ export default class PostForm extends Component {
 
 
   render() {
+    if(this.state.submitted === true){
+      return(
+        <Redirect to={"/browse/job/" + this.state.category}/>
+      )
+    }
     return (
       <div class="card postjobcard">
         <div class="card-header"><h1 class="postHeader">Post a {this.state.postType}</h1></div>
