@@ -59,15 +59,22 @@ export default class PostForm extends Component {
       creatorID: sessionStorage.getItem("id")
     }
 
-    ServiceDB.create(newService).then(window.location.replace("/browse/service/"+this.state.category))
+    ServiceDB.create(newService).then(this.setState({submitted: true}))
   }
 
 
   render() {
     if(this.state.submitted === true){
+      if(this.state.postType === "Job"){
       return(
         <Redirect to={"/browse/job/" + this.state.category}/>
       )
+      }
+      else{
+        return(
+          <Redirect to={"/browse/service/" + this.state.category}/>
+        )
+      }
     }
     return (
       <div class="card postjobcard">
