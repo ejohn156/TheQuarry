@@ -13,7 +13,7 @@ export default {
     });
   },
     delete: function(ServiceId) {
-      return axios.get("/api/services/" + ServiceId,
+      return axios.post("/api/services/delete/" + ServiceId,
     {
     });
     },

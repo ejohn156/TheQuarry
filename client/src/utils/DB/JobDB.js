@@ -13,7 +13,7 @@ export default {
     });
   },
     delete: function(jobId) {
-      return axios.get("/api/jobs/" + jobId,
+      return axios.post("/api/jobs/delete/" + jobId,
     {
     });
     },
