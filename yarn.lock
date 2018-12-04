@@ -2370,7 +2370,7 @@ ps-tree@^1.0.1:
   resolved "https://registry.yarnpkg.com/ps-tree/-/ps-tree-1.1.0.tgz#b421b24140d6203f1ed3c76996b4427b08e8c014"
   integrity sha1-tCGyQUDWID8e08dplrRCewjowBQ=
   dependencies:
-    event-stream "~3.3.0"
+    
 
 pseudomap@^1.0.2:
   version "1.0.2"
