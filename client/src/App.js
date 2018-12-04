@@ -23,7 +23,7 @@ import myJobPage from "./pages/myJobsPage";
 import myServicePage from "./pages/myServicesPage";
 import editProfilePage from "./pages/editProfilePage"
 import applyPage from "./pages/ApplyPage"
-
+import requestPage from "./pages/RequestPage"
 
 class App extends Component {
   state = {
@@ -58,6 +58,7 @@ class App extends Component {
             <Route exact path="/post/Job" component={postJob}/>
             <Route exact path="/post/Service" component={postService}/>
             <Route exact path="/apply" component={applyPage}/>
+            <Route exact path="/request" component={requestPage}/>
           </Switch>
           </Router>
           </div>

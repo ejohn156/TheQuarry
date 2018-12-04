@@ -52,7 +52,7 @@ class ServiceResults extends Component {
     render(){
         if(this.state.applied === "success"){
             return(
-            <Redirect to="/apply"/>
+            <Redirect to="/request"/>
             )
         }
         else if(this.state.applied === "failed"){
