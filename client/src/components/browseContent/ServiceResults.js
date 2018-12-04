@@ -1,9 +1,11 @@
 import React, { Component } from "react";
 import ServiceDB from "../../utils/DB/ServiceDB"
+import {Redirect} from "react-router-dom"
 
 
 class ServiceResults extends Component {
     state = {
+        applied: "",
         type: this.props.type,
         services: [],
         filter: this.props.filter
@@ -35,19 +37,29 @@ class ServiceResults extends Component {
 
     handleApplication(subject){
         if(sessionStorage.getItem("id") === null){
-            window.location.replace("/login")
+            this.setState({applied: "failed"})
         }else{
             sessionStorage.setItem("subject", subject) 
-            window.location.replace("/apply")
+            this.setState({applied: "success"})
         }
     }
     handleDelete(subject){
-        ServiceDB.delete(subject).then(window.location.reload())
+        ServiceDB.delete(subject).then(this.getUsersServices())
         }
     
 
 
     render(){
+        if(this.state.applied === "success"){
+            return(
+            <Redirect to="/apply"/>
+            )
+        }
+        else if(this.state.applied === "failed"){
+            return(
+                <Redirect to="/login"/>
+            )
+        }
         return(
         <div>
         {this.state.services.map(service => {return(

@@ -1,9 +1,10 @@
 import React, { Component } from "react";
 import JobDB from "../../utils/DB/JobDB"
 import "./Results.css"
-
+import {Redirect} from "react-router-dom"
 class JobResults extends Component {
     state = {
+        applied: "",
         type: this.props.type,
         filter: this.props.filter,
         userID: "",
@@ -40,19 +41,30 @@ class JobResults extends Component {
 
     handleApplication(subject){
         if(sessionStorage.getItem("id") === null){
-            window.location.replace("/login")
+            this.setState({applied:"failed"})
         }else{
             sessionStorage.setItem("subject", subject) 
-            window.location.replace("/apply")
+            this.setState({applied: "success"})
         }
     }
     handleDelete(subject){
-        JobDB.delete(subject).then(window.location.reload())
+        JobDB.delete(subject).then(this.getUsersJob())
         }
     
 
     render(){
         
+        if(this.state.applied === "success"){
+            return(
+            <Redirect to="/apply"/>
+            )
+        }
+        else if(this.state.applied === "failed"){
+            return(
+                <Redirect to="/login"/>
+            )
+        }
+
         return(
             
         <div>
