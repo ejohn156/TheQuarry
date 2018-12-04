@@ -6,6 +6,7 @@ class JobResults extends Component {
     state = {
         type: this.props.type,
         filter: this.props.filter,
+        userID: "",
         jobs: [],
     }
 
@@ -37,6 +38,15 @@ class JobResults extends Component {
         this.getUsersJob()
     }
 
+    handleApplication(subject){
+        if(sessionStorage.getItem("id") === undefined){
+
+        }else{
+            sessionStorage.setItem("subject", subject) 
+            alert(sessionStorage.getItem("subject")) 
+        }
+    }
+
     render(){
         
         return(
@@ -51,7 +61,8 @@ class JobResults extends Component {
                 <div class="col-md-3"><h4>{job.creator}</h4></div>
                 <div class="col-md-3 category"><h4>{job.category}</h4></div>
                 <div class="col-md-4 desc"><p>{job.description}</p></div>
-                <div class="col-md-2 price"><p>Estimate: ${job.estimate}</p></div>
+                <div class="col-md-1 price"><p>Estimate: ${job.estimate}</p></div>
+                <div class="col-md-1 apply"><button onClick={(subject) => this.handleApplication(job._id)}>Apply</button></div>
             </div>
             </div>
             </div>
