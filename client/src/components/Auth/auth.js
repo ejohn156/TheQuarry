@@ -31,8 +31,13 @@ export default class authContent extends Component{
     }
     DB.login(User.username, User.password)
     .then(res => {
+        if(res.data[0]._id === null){
+            alert("invalid login")
+        }
+        else{
         sessionStorage.setItem("id", res.data[0]._id)
         window.location.replace("/")
+        }
         })
     
 };
