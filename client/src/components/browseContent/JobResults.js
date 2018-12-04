@@ -39,11 +39,14 @@ class JobResults extends Component {
     }
 
     handleApplication(subject){
-        if(sessionStorage.getItem("id") === undefined){
-
+        //alert(sessionStorage.getItem("id"))
+        if(sessionStorage.getItem("id") === null){
+            window.location.replace("/login")
         }else{
             sessionStorage.setItem("subject", subject) 
-            alert(sessionStorage.getItem("subject")) 
+            window.location.replace("/apply")
+            //alert(sessionStorage.getItem("subject")) 
+        
         }
     }
 
