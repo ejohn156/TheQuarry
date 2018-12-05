@@ -80,10 +80,10 @@ class JobResults extends Component {
             <div class="card-body">
             <div class="row">
                
-                <div class="col-md-3"><h4>{job.creator}</h4></div>
-                <div class="col-md-3 category"><h4>{job.category}</h4></div>
-                <div class="col-md-4 desc"><p>{job.description}</p></div>
-                <div class="col-md-1 price"><p>Estimate: ${job.estimate}</p></div>
+                <div class="col-md-3"><h4 class="creator">{job.creator}</h4></div>
+                <div class="col-md-3 category"><h4 class="cat">{job.category}</h4></div>
+                <div class="col-md-4 desc"><p class="desc">{job.description}</p></div>
+                <div class="col-md-1 price"><p class="est">Est: ${job.estimate}</p></div>
                 <div class="col-md-1 apply"><button onClick={(subject) => this.state.type === "browse" ? this.handleApplication(job._id) : this.handleDelete(job._id)}>{this.state.type === "browse" ? "Apply" : "Delete"}</button></div>
             </div>
             </div>
