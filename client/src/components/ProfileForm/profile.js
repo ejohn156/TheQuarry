@@ -32,10 +32,10 @@ export default class ProfileForm extends Component {
                             <h3 class="profContent">Major: {this.state.user.major}</h3>
                             <br/>
                             <h3 class="profContent">About Me:</h3>
-                            <p>{this.state.user.about_me}</p>
+                            <p class="profContent">{this.state.user.about_me}</p>
                             <br/>
                             <h3 class="profContent">Work Experience:</h3>
-                            <p>{this.state.user.work_experience}</p>
+                            <p class="profContent">{this.state.user.work_experience}</p>
                             <br/>
                             </div>
                             </div>
