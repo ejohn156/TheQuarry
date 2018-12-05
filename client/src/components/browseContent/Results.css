@@ -1,5 +1,6 @@
 .title{
     text-align: center;
+    color: white;
 }
 .category{
     
@@ -11,4 +12,8 @@
 }
 .card{
     margin-top: 1%;
+}
+
+.creator, .cat, .desc, .est{
+    color: white;
 }

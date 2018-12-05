@@ -48,3 +48,9 @@
     margin-bottom: 8%;
     background: rgba(0, 112, 60, 0.8);
 }
+.creator, .cat, .desc, .est{
+    color: white;
+}
+.title{
+    color: white;
+}
