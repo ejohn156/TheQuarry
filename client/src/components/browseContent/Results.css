@@ -17,3 +17,20 @@
 .creator, .cat, .desc, .est{
     color: white;
 }
+.browseBtn{
+    background-color: rgba(240, 203, 0, 0.8);
+    outline: none;
+    color: #fff;
+    font-size: 14px;
+    height: auto;
+    font-weight: normal;
+    padding: 8px 0;
+    border-color: #00703C;  
+    width: 60%;
+}
+.browseBtn:hover,
+.browseBtn:focus {
+    color: #fff;
+    background-color: #C3D7A4;
+    border-color: #C3D7A4;
+}

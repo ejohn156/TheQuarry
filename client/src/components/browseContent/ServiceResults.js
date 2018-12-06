@@ -76,7 +76,7 @@ class ServiceResults extends Component {
                 <div class="col-md-3 category"><h5 class="cat">{service.category}</h5></div>
                 <div class="col-md-4 desc"><p class="desc">{service.description}</p></div>
                 <div class="col-md-2 price"><p class="est">Hourly: ${service.hourly}</p></div>
-                <div class="col-md-1 apply"><button onClick={(subject) => this.state.type === "browse" ? this.handleApplication(service._id) : this.handleDelete(service._id)}>{this.state.type === "browse" ? "Request" : "Delete"}</button></div>
+                <div class="col-md-1 apply"><button class="browseBtn" onClick={(subject) => this.state.type === "browse" ? this.handleApplication(service._id) : this.handleDelete(service._id)}>{this.state.type === "browse" ? "Request" : "Delete"}</button></div>
             </div>
             </div>
             </div>
