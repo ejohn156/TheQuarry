@@ -21,7 +21,9 @@ module.exports = {
         console.log(req.body)
         db.Application
             .create(req.body)
-            .then(dbModel => res.json(dbModel))
+            .then(newApplication => {
+                return db.Profile.findOneAndUpdate({_id: req.body.applicantID}, {$push: {applications: newApplication._id}}, {new: true})
+            })
             .catch(err => res.status(422).json(err));
     },
     
