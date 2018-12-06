@@ -15,7 +15,7 @@ router.route("/filter/:filter")
 router.route('/update/:id')
   .post(JobsController.update)
 
-router.route('/:id')
+router.route('/ind/:id')
   .get(JobsController.findById)
 
 router.route("/delete/:id")

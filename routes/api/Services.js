@@ -15,7 +15,7 @@ router.route('/add')
 router.route('/update/:id')
   .post(ServicesController.update)
 
-router.route('/:id')
+router.route('/ind/:id')
   .get(ServicesController.findById)
 
 router.route("/delete/:id")

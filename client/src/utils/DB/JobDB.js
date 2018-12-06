@@ -27,6 +27,6 @@ export default {
     },
     
     getById: function(id) {
-      return axios.get("/api/jobs/"+id)
+      return axios.get("/api/jobs/ind/"+id)
     }
   };

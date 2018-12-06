@@ -27,6 +27,6 @@ export default {
     },
     
     getById: function(id) {
-      return axios.get("/api/services/"+id)
+      return axios.get("/api/services/ind/"+id)
     }
   };
