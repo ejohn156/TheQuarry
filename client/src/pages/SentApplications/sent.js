@@ -15,6 +15,9 @@ export default class sentPage extends Component {
     componentDidMount(){
         this.getApplicationsAndRequests()
     }
+    componentDidUpdate(){
+        this.getApplicationsAndRequests()
+      }
     getApplicationsAndRequests(){
         var id = sessionStorage.getItem("id")
         ApplicationDB.getUserApplications(id).then(res => this.setState({
