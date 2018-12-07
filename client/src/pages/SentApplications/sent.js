@@ -26,7 +26,7 @@ export default class sentPage extends Component {
         }))
     }
     deleteApplication(id){
-        ApplicationDB.delete(id).then(window.location.replace("/"))
+        ApplicationDB.delete(id).then(alert("Application deleted"))
         }
     
     contact(id){
