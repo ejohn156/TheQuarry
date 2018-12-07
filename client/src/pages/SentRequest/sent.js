@@ -28,6 +28,9 @@ export default class sentPage extends Component {
     deleteRequest(id){
         RequestDB.delete(id).then(alert("Request Deleted"))
     }
+    deleteApplication(id){
+        ApplicationDB.delete(id).then(alert("Application deleted"))
+        }
     contact(id){
         ProfileDB.getById(id).then(res => alert("Username: " + res.data.username + "\nEmail: " + res.data.email))
       }
