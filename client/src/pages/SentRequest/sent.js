@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import "./sent.css";
 import Navbar from '../../components/Navbar'
 import JobDB from '../../utils/DB/JobDB'
-import ServiceDB from '../../utils/DB/ServiceDB'
+import ProfileDB from '../../utils/DB/ProfileDB'
 import RequestDB from '../../utils/DB/RequestDB'
 import ApplicationDB from '../../utils/DB/ApplicationDB'
 import { Redirect } from 'react-router-dom'
@@ -25,6 +25,9 @@ export default class sentPage extends Component {
     deleteRequest(id){
         RequestDB.delete(id).then(this.getApplicationsAndRequests())
     }
+    contact(id){
+        ProfileDB.getById(id).then(res => alert("Username: " + res.data.username + "\nEmail: " + res.data.email))
+      }
     render() {
         
         return (
@@ -59,7 +62,7 @@ export default class sentPage extends Component {
                                                 <th>{application.jobTitle}</th>
                                                 <th>{application.jobCategory}</th>
                                                 <th>${application.jobEstimate}</th> 
-                                                <th><button class="apply">delete</button></th>
+                                            <th>{application.status != "Accepted" ? <button class="apply" onClick={(id) => this.deleteRequest(application._id)}>delete</button>:<button class="apply" onClick={(application) => this.contact(application)}>Contact</button>}</th>
                                             </tbody>)
                                         })
                                         :
@@ -70,7 +73,7 @@ export default class sentPage extends Component {
                                                 <th>{request.serviceTitle}</th>
                                                 <th>{request.serviceCategory}</th>
                                                 <th>${request.serviceHourly}</th>
-                                                <th><button class="apply" onClick={(id) => this.deleteRequest(request._id)}>delete</button></th>
+                                                <th>{request.status != "Accepted" ? <button class="apply" onClick={(id) => this.deleteRequest(request._id)}>delete</button>:<button class="apply" onClick={(id) => this.contact(request.recipientID)}>Contact</button>}</th>
                                             </tbody>)
                                         })
                                         }

@@ -92,6 +92,7 @@ export default class Navbar extends Component {
             <Link className="dropdown-item" to="/mailbox/sent/requests">Sent Requests</Link>
           </div>
         </li>
+        
         <li className="logout" value={this.state.user.username} onClick={this.logout}>
           <Link className="nav-link" to="/">Logout</Link>
         </li> 

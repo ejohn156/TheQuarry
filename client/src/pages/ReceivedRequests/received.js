@@ -25,14 +25,28 @@ export default class sentPage extends Component {
         
     }
     declineRequest(request){
-      alert("request declined")
-      request.status = "declined"
+      alert("Request Declined")
+      request.status = "Declined"
       RequestDB.decline(request).then(this.getRequests())
     }
+    complete(request){
+        alert("Service has been completed")
+        RequestDB.delete(request._id).then(this.getRequests())
+      }
     acceptRequest(request){
-      ProfileDB.getById(request.requesterID).then(res => alert("Please contact " + res.data.username + " using " + res.data.email))
-      request.status = "accepted"
+      ProfileDB.getById(request.requesterID).then(res => alert("Request Accepted!\nPlease contact " + res.data.username + " using " + res.data.email))
+      request.status = "Accepted"
       RequestDB.accept(request).then(this.getRequests())
+  }
+  contact(request){
+    ProfileDB.getById(request.requesterID).then(res => alert("Username: " + res.data.username + "\nEmail: " + res.data.email))
+  }
+  complete(request){
+    alert("Service has been completed")
+    RequestDB.delete(request._id).then(this.getRequests())
+  }
+  componentDidUpdate(){
+      this.getRequests()
   }
     render() {
         
@@ -50,23 +64,25 @@ export default class sentPage extends Component {
                                 <table class="table table-hover table-dark">
                                     <thead>
                                         <tr>
-                                            <th scope="col">requester</th>
+                                        <th scope="col">Status</th>
+                                            <th scope="col">Requester</th>
                                             <th scope="col">Title</th>
-                                            <th scope="col">comment</th>
+                                            <th scope="col">Comment</th>
                                             <th scope="col"></th>
                                             <th scope="col"></th>
                                             <th scope="col"></th>
                                         </tr>
                                     </thead>
                                         {this.state.requests.map(request =>{
+                                            if(request.status != "Declined"){
                                             return(<tbody>
-                                                <td>{request.applicantName}</td>
-                                                <td>{request.jobTitle}</td> 
+                                                <td>{request.status}</td>
+                                                <td>{request.requesterName}</td>
+                                                <td>{request.serviceTitle}</td> 
                                                 <td colspan="3">{request.comment}</td>
-                                                <td><button class="apply" onClick={(id) => this.declineRequest(request)}>Decline</button>
-                                                <button class="apply" onClick={(id) => this.acceptRequest(request)}>Accept</button></td>
-                                            </tbody>)
-                                       
+                                                <td>{request.status === "Pending" ? <div><button class="apply" onClick={(id) => this.declineRequest(request)}>Decline</button>
+                                                <button class="apply" onClick={(id) => this.acceptRequest(request)}>Accept</button></div>:<div><button onClick={(id) => this.contact(request)}>Contact</button><button onClick={(id) => this.complete(request)}>Complete</button></div>}</td>
+                                            </tbody>)}                                      
                                         })}
                                     
                                 </table>
