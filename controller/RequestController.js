@@ -41,6 +41,7 @@ module.exports = {
             .catch(err => res.status(422).json(err));
     },
     delete: function (req, res) {
+
         db.Request
             .findById(req.params.id)
             .then(dbModel => dbModel.remove())

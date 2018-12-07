@@ -3,6 +3,7 @@ import "./sent.css";
 import Navbar from '../../components/Navbar'
 import JobDB from '../../utils/DB/JobDB'
 import ServiceDB from '../../utils/DB/ServiceDB'
+import RequestDB from '../../utils/DB/RequestDB'
 import ProfileDB from '../../utils/DB/ProfileDB'
 import ApplicationDB from '../../utils/DB/ApplicationDB'
 import { Redirect } from 'react-router-dom'
@@ -69,7 +70,7 @@ export default class sentPage extends Component {
                                                 <th>{application.jobTitle}</th>
                                                 <th>{application.jobCategory}</th>
                                                 <th>${application.jobEstimate}</th> 
-                                                <th>{application.status != "Accepted" ? <button class="apply" onClick={(id) => this.deleteRequest(application._id)}>delete</button>:<button class="apply" onClick={(id) => this.contact(application.recipientID)}>Contact</button>}</th>
+                                                <th>{application.status != "Accepted" ? <button class="apply" onClick={(id) => this.deleteApplication(application._id)}>delete</button>:<button class="apply" onClick={(id) => this.contact(application.recipientID)}>Contact</button>}</th>
                                             </tbody>)
                                         })
                                         :
