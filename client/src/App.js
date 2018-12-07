@@ -63,7 +63,8 @@ class App extends Component {
             <Route exact path="/request" component={requestPage}/>
             <Route exact path="/mailbox/sent/requests" component={sentRequests}/>
             <Route exact path="/mailbox/sent/applications" component={sentApplications}/>
-            <Route exact path="/mailbox/received" component={receivedPage}/>
+            <Route exact path="/mailbox/received/applications" component={receivedApplications}/>
+            <Route exact path="/mailbox/received/requests" component={receivedRequests}/>
           </Switch>
           </Router>
           </div>

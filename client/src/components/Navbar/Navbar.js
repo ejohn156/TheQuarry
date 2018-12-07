@@ -86,7 +86,8 @@ export default class Navbar extends Component {
             Mailbox
           </Link>
           <div className="dropdown-menu" aria-labelledby="navbarDropdown">
-            <Link className="dropdown-item" to="/mailbox/received">Received</Link>
+            <Link className="dropdown-item" to="/mailbox/received/applications">Received Applications</Link>
+            <Link className="dropdown-item" to="/mailbox/received/requests">Received Requests</Link>
             <Link className="dropdown-item" to="/mailbox/sent/applications">Sent Applications</Link>
             <Link className="dropdown-item" to="/mailbox/sent/requests">Sent Requests</Link>
           </div>
