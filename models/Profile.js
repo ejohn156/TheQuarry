@@ -10,6 +10,8 @@ const profileSchema = new Schema({
     email: {type: String,match: [/.+@.+\..+/, "Please enter a valid e-mail address"],required: true,unique: true},
     services: [{type: Schema.Types.ObjectId,ref: "Service",unique : false}],
     jobs: [{type: Schema.Types.ObjectId,ref: "Job",unique : false}, ],
+    requests: [{type: Schema.Types.ObjectId,ref: "Request",unique : false}],
+    applications: [{type: Schema.Types.ObjectId,ref: "Application",unique : false}],
     major:{type: String,required: false,trim: true,unique: false},
     work_experience:{type: String,required: false,trim: true,unique: false},
     about_me:{type: String,required: false,trim: true,unique: false},

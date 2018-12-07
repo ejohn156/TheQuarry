@@ -34,6 +34,12 @@ class ServiceResults extends Component {
         else if(this.state.type === "profile")
         this.getUsersServices()
     }
+    componentDidUpdate(){
+        if(this.state.type === "browse")
+            this.getServices()
+            else if(this.state.type === "profile")
+            this.getUsersServices()
+    }
 
     handleApplication(subject){
         if(sessionStorage.getItem("id") === null){
@@ -69,14 +75,22 @@ class ServiceResults extends Component {
             else{
             return(
             <div class="card">
-            <div class="card-header"><h2 class="title">{service.title}</h2></div>
             <div class="card-body">
             <div class="row">
-                <div class="col-md-3"><h4 class="creator">{service.creator}</h4></div>
-                <div class="col-md-3 category"><h5 class="cat">{service.category}</h5></div>
-                <div class="col-md-4 desc"><p class="desc">{service.description}</p></div>
-                <div class="col-md-2 price"><p class="est">Hourly: ${service.hourly}</p></div>
-                <div class="col-md-1 apply"><button class="browseBtn" onClick={(subject) => this.state.type === "browse" ? this.handleApplication(service._id) : this.handleDelete(service._id)}>{this.state.type === "browse" ? "Request" : "Delete"}</button></div>
+            <div class="col-md-12">
+            <div class="row">
+                <div class="col-md-4"><h4 class="creator"   >Service: {service.title}</h4></div>
+                <div class="col-md-4"><h4 class="creator"   >Creator: {service.creator}</h4></div>
+                <div class="col-md-4 category"><h4 class="cat">Type: {service.category}</h4></div>
+                </div>
+                <div class="row">
+                <div class="col-md-6 desc"><h4>Description:</h4><p class="desc">{service.description}</p></div>
+                </div>
+                <div class="row">
+                <div class="col-md-6 price"><h4 class="est">Hourly Rate: ${service.hourly}</h4></div>
+                <div class="col-md-6 apply"><button class="browseBtn" onClick={(subject) => this.state.type === "browse" ? this.handleApplication(service._id) : this.handleDelete(service._id)}>{this.state.type === "browse" ? "Request" : "Delete"}</button></div>
+            </div>
+            </div>
             </div>
             </div>
             </div>

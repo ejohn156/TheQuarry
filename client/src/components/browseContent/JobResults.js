@@ -10,7 +10,12 @@ class JobResults extends Component {
         userID: "",
         jobs: [],
     }
-
+componentDidUpdate(){
+    if(this.state.type === "browse")
+        this.getJobs()
+        else if(this.state.type === "profile")
+        this.getUsersJob()
+}
     getUsersJob(){
             
             JobDB.getUsersJobs(sessionStorage.getItem("id")).then(
@@ -76,15 +81,22 @@ class JobResults extends Component {
             else{
             return(
             <div class="card">
-            <div class="card-header"><h2 class="title">{job.title}</h2></div>
             <div class="card-body">
             <div class="row">
-               
-                <div class="col-md-3"><h4 class="creator"   >{job.creator}</h4></div>
-                <div class="col-md-3 category"><h4 class="cat">{job.category}</h4></div>
-                <div class="col-md-4 desc"><p class="desc">{job.description}</p></div>
-                <div class="col-md-1 price"><p class="est">Est: ${job.estimate}</p></div>
-                <div class="col-md-1 apply"><button class="browseBtn" onClick={(subject) => this.state.type === "browse" ? this.handleApplication(job._id) : this.handleDelete(job._id)}>{this.state.type === "browse" ? "Apply" : "Delete"}</button></div>
+            <div class="col-md-12">
+            <div class="row">
+                <div class="col-md-4"><h4 class="creator"   >Job: {job.title}</h4></div>
+                <div class="col-md-4"><h4 class="creator"   >Creator: {job.creator}</h4></div>
+                <div class="col-md-4 category"><h4 class="cat">Type: {job.category}</h4></div>
+                </div>
+                <div class="row">
+                <div class="col-md-12 desc"><h4>Description:</h4><p class="desc">{job.description}</p></div>
+                </div>
+                <div class="row">
+                <div class="col-md-6 price"><h4 class="est">Estimate: ${job.estimate}</h4></div>
+                <div class="col-md-6 apply"><button class="browseBtn" onClick={(subject) => this.state.type === "browse" ? this.handleApplication(job._id) : this.handleDelete(job._id)}>{this.state.type === "browse" ? "Apply" : "Delete"}</button></div>
+            </div>
+            </div>
             </div>
             </div>
             </div>

@@ -20,4 +20,13 @@ router.route('/:id')
 router.route("/delete/:id")
 .post(RequestController.delete)
 
+router.route("/decline/:id")
+.post(RequestController.decline)
+
+router.route("/accept/:id")
+.post(RequestController.accept)
+
+router.route('/recipient/:id')
+  .get(RequestController.findReceivedRequests)
+
 module.exports = router;

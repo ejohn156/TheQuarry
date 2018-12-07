@@ -14,10 +14,19 @@ router.route("/:filter")
 router.route('/update/:id')
   .post(ApplicationController.update)
 
-router.route('/:id')
-  .get(ApplicationController.findById)
+router.route('/user/:id')
+  .get(ApplicationController.findUsersApplications)
+  
+router.route('/recipient/:id')
+  .get(ApplicationController.findReceivedApplications)
 
 router.route("/delete/:id")
 .post(ApplicationController.delete)
+
+router.route("/decline/:id")
+.post(ApplicationController.decline)
+
+router.route("/accept/:id")
+.post(ApplicationController.accept)
 
 module.exports = router;

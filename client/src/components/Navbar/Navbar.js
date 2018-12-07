@@ -81,6 +81,17 @@ export default class Navbar extends Component {
             <Link className="dropdown-item" to="/profile/Services">View Services</Link>
           </div>
         </li>
+        <li className="nav-item dropdown">
+          <Link className="nav-link dropdown-toggle" to="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Mailbox
+          </Link>
+          <div className="dropdown-menu" aria-labelledby="navbarDropdown">
+            <Link className="dropdown-item" to="/mailbox/received/applications">Received Applications</Link>
+            <Link className="dropdown-item" to="/mailbox/received/requests">Received Requests</Link>
+            <Link className="dropdown-item" to="/mailbox/sent/applications">Sent Applications</Link>
+            <Link className="dropdown-item" to="/mailbox/sent/requests">Sent Requests</Link>
+          </div>
+        </li>
         <li className="logout" value={this.state.user.username} onClick={this.logout}>
           <Link className="nav-link" to="/">Logout</Link>
         </li> 

@@ -3,8 +3,13 @@ const Schema = mongoose.Schema;
 
 const applicationSchema = new Schema({
 
-    jobID: {type: mongoose.Schema.Types.ObjectId, ref: 'Job', required: true, unique: false},
-    applicantID: {type: mongoose.Schema.Types.ObjectId, ref: 'Profile', required: true, unique: false},
+    jobTitle: {type: String, required: true, unique: false},
+    jobCreator: {type: String, required: true, unique: false},
+    jobEstimate: {type: String, required: true, unique: false},
+    jobCategory: {type: String, required: true, unique: false},
+    applicantID: {type: String, required: true, unique: false},
+    applicantName: {type: String, required: true, unique: false},
+    recipientID: {type: String, required: true, unique: false},
     status: {type: String, default: 'Pending', required: true},
     comment: {type: String, required: false, unique: false}
 
