@@ -24,7 +24,8 @@ import myServicePage from "./pages/myServicesPage";
 import editProfilePage from "./pages/editProfilePage"
 import applyPage from "./pages/ApplyPage"
 import requestPage from "./pages/RequestPage"
-import sentPage from "./pages/SentPage"
+import sentRequests from "./pages/SentRequest"
+import sentApplications from "./pages/SentApplications"
 import receivedPage from "./pages/ReceivedPage"
 class App extends Component {
   state = {
@@ -60,7 +61,8 @@ class App extends Component {
             <Route exact path="/post/Service" component={postService}/>
             <Route exact path="/apply" component={applyPage}/>
             <Route exact path="/request" component={requestPage}/>
-            <Route exact path="/mailbox/sent" component={sentPage}/>
+            <Route exact path="/mailbox/sent/requests" component={sentRequests}/>
+            <Route exact path="/mailbox/sent/applications" component={sentApplications}/>
             <Route exact path="/mailbox/received" component={receivedPage}/>
           </Switch>
           </Router>

@@ -3,7 +3,10 @@ const Schema = mongoose.Schema;
 
 const requestSchema = new Schema({
 
-    serviceID: {type: String, ref: 'Service', required: true, unique: false},
+    serviceTitle: {type: String, required: true, unique: false},
+    serviceCreator: {type: String, required: true, unique: false},
+    serviceHourly: {type: String, required: true, unique: false},
+    serviceCategory: {type: String, required: true, unique: false},
     requesterID: {type: String, required: true, unique: false},
     status: {type: String, default: 'Pending', required: true},
     comment: {type: String, required: false, unique: false}

@@ -87,7 +87,8 @@ export default class Navbar extends Component {
           </Link>
           <div className="dropdown-menu" aria-labelledby="navbarDropdown">
             <Link className="dropdown-item" to="/mailbox/received">Received</Link>
-            <Link className="dropdown-item" to="/mailbox/sent">Sent</Link>
+            <Link className="dropdown-item" to="/mailbox/sent/applications">Sent Applications</Link>
+            <Link className="dropdown-item" to="/mailbox/sent/requests">Sent Requests</Link>
           </div>
         </li>
         <li className="logout" value={this.state.user.username} onClick={this.logout}>

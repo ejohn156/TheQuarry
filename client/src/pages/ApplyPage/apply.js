@@ -32,7 +32,10 @@ export default class applyPage extends Component  {
            sessionStorage.removeItem("subject")
            alert("Application Submitted")
            var newApplication = {
-               jobID: this.state.job._id,
+               jobCreator: this.state.job.creator,
+               jobCategory: this.state.job.category,
+               jobTitle: this.state.job.title,
+               jobEstimate: this.state.job.estimate,
                applicantID: this.state.applicant._id,
                comment: this.state.comment
            }

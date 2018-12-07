@@ -9,7 +9,7 @@ export default {
     });
     },
     delete: function(id) {
-      return axios.delete("/api/Applications/" + id);
+      return axios.post("/api/Applications/delete/" + id);
     },
     
     create: function(applicationData) {

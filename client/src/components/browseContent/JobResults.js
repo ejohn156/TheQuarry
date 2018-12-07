@@ -10,7 +10,12 @@ class JobResults extends Component {
         userID: "",
         jobs: [],
     }
-
+componentDidUpdate(){
+    if(this.state.type === "browse")
+        this.getJobs()
+        else if(this.state.type === "profile")
+        this.getUsersJob()
+}
     getUsersJob(){
             
             JobDB.getUsersJobs(sessionStorage.getItem("id")).then(
