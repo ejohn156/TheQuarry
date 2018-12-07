@@ -17,10 +17,16 @@ router.route('/update/:id')
 router.route('/user/:id')
   .get(ApplicationController.findUsersApplications)
   
-router.route('/reciptient/:id')
+router.route('/recipient/:id')
   .get(ApplicationController.findReceivedApplications)
 
 router.route("/delete/:id")
 .post(ApplicationController.delete)
+
+router.route("/decline/:id")
+.post(ApplicationController.decline)
+
+router.route("/accept/:id")
+.post(ApplicationController.accept)
 
 module.exports = router;

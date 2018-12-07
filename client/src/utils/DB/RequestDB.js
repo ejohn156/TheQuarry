@@ -8,9 +8,20 @@ export default {
       return axios.get("/api/Requests/" + id,{
     });
     },
+    getReceivedRequests: function(id) {
+      return axios.get("/api/Requests/recipient/" + id,{
+    });
+    },
     delete: function(id) {
       return axios.post("/api/Requests/delete/" + id);
     },
+    accept: function(request) {
+      return axios.post("/api/Requests/accept/" + request._id, request);
+    },
+    decline: function(request) {
+      return axios.post("/api/Requests/decline/" + request._id, request);
+    },
+    
     
     create: function(requestData) {
       return axios.post("/api/Requests/add", requestData)

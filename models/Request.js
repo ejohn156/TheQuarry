@@ -8,6 +8,7 @@ const requestSchema = new Schema({
     serviceHourly: {type: String, required: true, unique: false},
     serviceCategory: {type: String, required: true, unique: false},
     requesterID: {type: String, required: true, unique: false},
+    requesterName: {type: String, required: true, unique: false},
     recipientID: {type: String, required: true, unique: false},
     status: {type: String, default: 'Pending', required: true},
     comment: {type: String, required: false, unique: false}

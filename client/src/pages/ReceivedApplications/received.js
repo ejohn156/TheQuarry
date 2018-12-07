@@ -15,17 +15,21 @@ export default class sentPage extends Component {
     }
     getApplications(){
         var id = sessionStorage.getItem("id")
-        ApplicationDB.getreceivedApplications(id).then(res => this.setState({
-            applications: res.data.applications,
-            requests: res.data.requests
+        ApplicationDB.getReceivedApplications(id)
+        .then(res => this.setState({
+            applications: res.data,
         }))
+        
     }
-    declineApplication(id){
-        ApplicationDB.decline(id).then(this.getApplications())
+    declineApplication(application){
+      alert("application declined")
+      application.status = "declined"
+      ApplicationDB.decline(application).then(this.getApplications())
     }
-    acceptApplication(id){
-      alert("please contact the applicant using the information on their profile page")
-      ApplicationDB.accept(id).then(this.getApplications())
+    acceptApplication(application){
+      alert("application accepted")
+      application.status = "accepted"
+      ApplicationDB.accept(application).then(this.getApplications())
   }
     render() {
         
@@ -43,24 +47,21 @@ export default class sentPage extends Component {
                                 <table class="table table-hover table-dark">
                                     <thead>
                                         <tr>
-                                            <th scope="col">Status</th>
-                                            <th scope="col">Recipient</th>
+                                            <th scope="col">Applicant</th>
                                             <th scope="col">Title</th>
-                                            <th scope="col">Category</th>
-                                            <th scope="col">{this.state.filter === "requests" ? "Estimate":"Hourly"}</th>
+                                            <th scope="col">comment</th>
+                                            <th scope="col"></th>
+                                            <th scope="col"></th>
                                             <th scope="col"></th>
                                         </tr>
                                     </thead>
-                                    
-
-                                        { this.state.applications.map(application =>{
+                                        {this.state.applications.map(application =>{
                                             return(<tbody>
-                                                <th>{application.status}</th>
-                                                <th>{application.jobCreator}</th>
-                                                <th>{application.jobTitle}</th>
-                                                <th>{application.jobCategory}</th>
-                                                <th>${application.jobEstimate}</th> 
-                                                <th><button class="apply" onClick={(id) => this.deleteApplication(application._id)}>delete</button></th>
+                                                <td>{application.applicantName}</td>
+                                                <td>{application.jobTitle}</td> 
+                                                <td colspan="3">{application.comment}</td>
+                                                <td><button class="apply" onClick={(id) => this.declineApplication(application)}>Decline</button>
+                                                <button class="apply" onClick={(id) => this.acceptApplication(application)}>Accept</button></td>
                                             </tbody>)
                                        
                                         })}

@@ -8,6 +8,7 @@ const applicationSchema = new Schema({
     jobEstimate: {type: String, required: true, unique: false},
     jobCategory: {type: String, required: true, unique: false},
     applicantID: {type: String, required: true, unique: false},
+    applicantName: {type: String, required: true, unique: false},
     recipientID: {type: String, required: true, unique: false},
     status: {type: String, default: 'Pending', required: true},
     comment: {type: String, required: false, unique: false}

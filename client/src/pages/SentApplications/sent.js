@@ -45,7 +45,7 @@ export default class sentPage extends Component {
                                             <th scope="col">Recipient</th>
                                             <th scope="col">Title</th>
                                             <th scope="col">Category</th>
-                                            <th scope="col">{this.state.filter === "requests" ? "Estimate":"Hourly"}</th>
+                                            <th scope="col">Estimate</th>
                                             <th scope="col"></th>
                                         </tr>
                                     </thead>

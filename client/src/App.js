@@ -27,7 +27,7 @@ import sentRequests from "./pages/SentRequest"
 import sentApplications from "./pages/SentApplications"
 import receivedApplications from "./pages/ReceivedApplications"
 import receivedRequests from "./pages/ReceivedRequests"
-import requestPage from "./pages/requestPage"
+import requestPage from "./pages/RequestPage"
 class App extends Component {
   state = {
     currentPage: "home"

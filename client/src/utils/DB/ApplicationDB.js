@@ -15,6 +15,12 @@ export default {
     delete: function(id) {
       return axios.post("/api/Applications/delete/" + id);
     },
+    accept: function(application) {
+      return axios.post("/api/Applications/accept/" + application._id, application);
+    },
+    decline: function(application) {
+      return axios.post("/api/Applications/decline/" + application._id, application);
+    },
     
     create: function(applicationData) {
       return axios.post("/api/Applications/add", applicationData)
