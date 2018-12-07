@@ -8,6 +8,16 @@ module.exports = {
             .then(dbModel => res.json(dbModel))
             .catch(err => res.status(422).json(err))
     },
+    findUsersApplications: function(req,res){
+        console.log(req.params.id)
+        db.Profile
+            .findOne({_id: req.params.id})
+            .populate("applications")
+            .populate("requests")
+            .sort({ date: -1 })
+            .then(dbModel => res.json(dbModel))
+            .catch(err => res.status(422).json(err))
+    },
     findFiltered: function(req,res){
         db.Job.find({category: req.params.filter}).then(dbModel => res.json(dbModel)).catch(err => res.status(422).json(err))
     },

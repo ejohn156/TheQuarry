@@ -14,8 +14,8 @@ router.route("/:filter")
 router.route('/update/:id')
   .post(ApplicationController.update)
 
-router.route('/:id')
-  .get(ApplicationController.findById)
+router.route('/user/:id')
+  .get(ApplicationController.findUsersApplications)
 
 router.route("/delete/:id")
 .post(ApplicationController.delete)

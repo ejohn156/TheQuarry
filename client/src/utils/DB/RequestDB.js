@@ -4,8 +4,12 @@ export default {
     get: function() {
       return axios.get("/api/Requests");
     },
+    getUserRequests: function(id) {
+      return axios.get("/api/Requests/" + id,{
+    });
+    },
     delete: function(id) {
-      return axios.delete("/api/Requests/" + id);
+      return axios.delete("/api/Requests/delete/" + id);
     },
     
     create: function(requestData) {

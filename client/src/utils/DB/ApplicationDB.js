@@ -4,6 +4,10 @@ export default {
     get: function() {
       return axios.get("/api/Applications");
     },
+    getUserApplications: function(id) {
+      return axios.get("/api/Applications/user/" + id,{
+    });
+    },
     delete: function(id) {
       return axios.delete("/api/Applications/" + id);
     },
