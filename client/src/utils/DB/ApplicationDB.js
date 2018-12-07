@@ -7,6 +7,10 @@ export default {
     getUserApplications: function(id) {
       return axios.get("/api/Applications/user/" + id,{
     });
+  },
+    getReceivedApplications: function(id) {
+      return axios.get("/api/Applications/recipient/" + id,{
+    });
     },
     delete: function(id) {
       return axios.post("/api/Applications/delete/" + id);

@@ -16,6 +16,9 @@ router.route('/update/:id')
 
 router.route('/user/:id')
   .get(ApplicationController.findUsersApplications)
+  
+router.route('/reciptient/:id')
+  .get(ApplicationController.findReceivedApplications)
 
 router.route("/delete/:id")
 .post(ApplicationController.delete)

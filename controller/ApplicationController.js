@@ -18,6 +18,13 @@ module.exports = {
             .then(dbModel => res.json(dbModel))
             .catch(err => res.status(422).json(err))
     },
+    findReceivedApplications: function(req,res){
+        console.log(req.params.id)
+        db.Application.find({recipientID : req.params.id})
+            .sort({ date: -1 })
+            .then(dbModel => res.json(dbModel))
+            .catch(err => res.status(422).json(err))
+    },
     findFiltered: function(req,res){
         db.Job.find({category: req.params.filter}).then(dbModel => res.json(dbModel)).catch(err => res.status(422).json(err))
     },

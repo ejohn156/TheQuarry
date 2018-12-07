@@ -34,6 +34,12 @@ class ServiceResults extends Component {
         else if(this.state.type === "profile")
         this.getUsersServices()
     }
+    componentDidUpdate(){
+        if(this.state.type === "browse")
+            this.getServices()
+            else if(this.state.type === "profile")
+            this.getUsersServices()
+    }
 
     handleApplication(subject){
         if(sessionStorage.getItem("id") === null){

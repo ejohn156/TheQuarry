@@ -37,6 +37,7 @@ export default class applyPage extends Component  {
                jobTitle: this.state.job.title,
                jobEstimate: this.state.job.estimate,
                applicantID: this.state.applicant._id,
+               recipientID: this.state.job.creatorID,
                comment: this.state.comment
            }
            ApplicationDB.create(newApplication).then(this.setState({delivered: true}))

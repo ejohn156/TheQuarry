@@ -23,10 +23,11 @@ import myJobPage from "./pages/myJobsPage";
 import myServicePage from "./pages/myServicesPage";
 import editProfilePage from "./pages/editProfilePage"
 import applyPage from "./pages/ApplyPage"
-import requestPage from "./pages/RequestPage"
 import sentRequests from "./pages/SentRequest"
 import sentApplications from "./pages/SentApplications"
-import receivedPage from "./pages/ReceivedPage"
+import receivedApplications from "./pages/ReceivedApplications"
+import receivedRequests from "./pages/ReceivedRequests"
+import requestPage from "./pages/requestPage"
 class App extends Component {
   state = {
     currentPage: "home"

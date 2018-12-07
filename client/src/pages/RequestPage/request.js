@@ -36,6 +36,7 @@ export default class RequestPage extends Component {
             serviceTitle: this.state.service.title,
             serviceHourly: this.state.service.hourly,
             requesterID: this.state.requester._id,
+            recipientID: this.state.service.creatorID,
             comment: this.state.comment
         }
         RequestDB.create(newRequest).then(this.setState({ delivered: true }))
