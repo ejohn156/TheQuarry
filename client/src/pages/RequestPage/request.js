@@ -47,7 +47,7 @@ export default class RequestPage extends Component {
         if (this.state.delivered === true) {
             return (
                 <div>
-                    <Redirect to="/" />
+                    <Redirect to="/mailbox/sent/requests" />
                 </div>
             )
         }
